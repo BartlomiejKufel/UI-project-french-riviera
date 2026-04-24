@@ -1,0 +1,62 @@
+:root {
+    /*Tło*/
+    --bg-primary: #0b1220;
+    --bg-secondary: #111827;
+    --bg-tertisiary: #172033;
+    --bg-card: #1b263b;
+    --bg-elevated: #243047;
+    --bg-overlay: rgba(6, 16, 27, 80%);
+
+    /*Marka*/
+    --brand-primary: #2ec5e8 ;
+    --brand-secondary: #7dddf0 ;
+    --brand-hover: #21b6d8 ;
+    --brand-active: #169ab8 ;
+    --brand-soft: rgba(46, 197, 232, 10%) ;
+
+    /*Tekst*/
+    --text-primary : #f5f7fa ;
+    --text-secondary : #b8c1cc ;
+    --text-tertiary : #7e8a9a ;
+    --text-inverse : #0b1220 ;
+    --text-accent : #2ec5e8 ;
+    --text-disable : #5e6a78 ;
+
+    /*Obramowanie*/
+    --border-subtle: rgba(255, 255, 255, 7%);
+    --border-default: rgba(255, 255, 255, 22%);
+    --border-strong: #3a475c ; 
+    --border-accent: #2ec5e8 ;
+    
+    /*Status*/
+    
+    /*Success*/
+    --status-success-bg : #163528 ;
+    --status-success-text : #7ee2a8 ;
+    --status-success-border : #2e8f5a ;
+    
+    /*Warning*/
+    --status-warning-bg : #3a2b14 ;
+    --status-warning-text : #f5c56b ;
+    --status-warning-border : #b98928 ;
+    
+    /*Error*/
+    --status-error-bg : #3a1c22 ;
+    --status-error-text : #ff8a9b ;
+    --status-error-border : #c94b63 ;
+    
+    /*Info*/
+    --status-info-bg : #102c36 ;
+    --status-info-text : #79d9f0 ;
+    --status-info-border : #2ec5e8 ;
+
+    /*Role*/
+    --role-guest : #2ec5e8 ;
+    --role-housekeeping : #7ee2a8 ;
+    --role-reception : #c4cdd8 ;
+    --role-kitchen : #e9b44c ;
+    --role-admin : #a78bfa ;
+    --role-manager : #60a5fa ;
+    --role-maintenance : #f59e0b ;
+
+}

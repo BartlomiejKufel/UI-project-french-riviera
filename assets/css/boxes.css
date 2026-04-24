@@ -1,0 +1,31 @@
+:root{
+    /*Odstępy*/
+    --space-4: 4px;
+    --space-8: 8px;
+    --space-12: 12px;
+    --space-16: 16px;
+    --space-24: 24px;
+    --space-32: 32px;
+    --space-40: 40px;
+    --space-48: 48px;
+    --space-64: 64px;
+
+    /*Promień*/
+    --radius-8: 8px;
+    --radius-12: 12px;
+    --radius-16: 16px;
+    --radius-24: 24px;
+}
+
+/*Cienie*/
+.shadow-small{
+    box-shadow: 0 2px 12px 0 rgba(255, 255, 255, 0.35);
+}
+
+.shadow-medium{
+    box-shadow: 0 4px 20px 0 rgba(255, 255, 255, 0.35);
+}
+
+.shadow-large{
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.40);
+}
