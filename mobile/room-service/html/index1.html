@@ -14,7 +14,7 @@
             display: flex; 
             justify-content: center; 
             align-items: center; 
-            min-height: 100vh; 
+            height: 100dvh; 
             margin: 0; 
             font-family: 'Inter', sans-serif; 
         }
@@ -26,7 +26,6 @@
             overflow: hidden; 
             display: flex; 
             flex-direction: column; 
-            /* border radius, to z figmy zajebane */
             border-radius: 45px;
             box-shadow: 0 0 0 10px #0a0f18, 0 30px 60px rgba(0,0,0,0.5);
             border: 1px solid rgba(255, 255, 255, 0.05);
@@ -34,6 +33,24 @@
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
         .font-serif-custom { font-family: 'Cormorant Garamond', serif; }
+
+        /* Widok mobilny - wypełnia cały ekran urządzenia */
+        @media (max-width: 1024px) {
+            body {
+                background-color: #111827;
+                align-items: flex-start;
+                justify-content: flex-start;
+                height: 100dvh;
+                overflow: hidden;
+            }
+            .app-container {
+                width: 100vw;
+                height: 100dvh;
+                border-radius: 0;
+                box-shadow: none;
+                border: none;
+            }
+        }
     </style>
 </head>
 <body>
@@ -83,7 +100,7 @@
             </div>
 
             <!-- legenda -->
-            <div class="w-[408px] h-[32px] mx-[16px] mt-[11px] bg-[#14202E] border border-[#e8e0d414] rounded-[9px] flex items-center justify-center gap-[8px] px-[16px]">
+            <div class="w-[calc(100%-32px)] h-[32px] mx-[16px] mt-[11px] bg-[#14202E] border border-[#e8e0d414] rounded-[9px] flex items-center justify-center gap-[8px] px-[16px]">
                 <div class="flex items-center gap-[4px]"><div class="w-[6px] h-[6px] bg-[#E05C5C] rounded-full shadow-[0_0_4px_#e05c5c]"></div><span class="font-medium text-[11px] text-[#9BA3AC]">Pilne</span></div>
                 <div class="w-[1px] h-[9px] bg-[#e8e0d41c]"></div>
                 <div class="flex items-center gap-[4px]"><div class="w-[6px] h-[6px] bg-[#6FAECC] rounded-full"></div><span class="font-medium text-[11px] text-[#9BA3AC]">W trakcie</span></div>
@@ -96,7 +113,7 @@
             </div>
 
             <!-- list title -->
-            <div class="w-[408px] mx-[16px] mt-[16px] mb-[7px] flex items-center justify-between h-[16.5px]">
+            <div class="w-[calc(100%-32px)] mx-[16px] mt-[16px] mb-[7px] flex items-center justify-between h-[16.5px]">
                 <span class="font-semibold text-[11px] text-[#5A6878] tracking-[0.85px] uppercase">Pokoje</span>
                 <span class="font-medium text-[11px] text-[#5A6878]">Piętro 2</span>
             </div>
@@ -105,7 +122,7 @@
             <div class="flex flex-col gap-[7px] px-[16px]">
                 
                 <!-- 201 -pilne + odnosnik do strony kolejnej (index2) -->
-                <a href="index2.html" class="block relative w-[408px] h-[68px] bg-[#172032] rounded-[11px] border border-[#e8e0d417] overflow-hidden cursor-pointer">
+                <a href="index2.html" class="block relative w-full h-[68px] bg-[#172032] rounded-[11px] border border-[#e8e0d417] overflow-hidden cursor-pointer">
                     <div class="absolute left-0 top-[8px] w-[3px] h-[52px] bg-[#E05C5C] rounded-r-[2px] shadow-[0_0_6px_#e05c5c55]"></div>
                     <div class="absolute left-[18px] top-[14px] flex flex-col gap-[3px]">
                         <div class="flex items-center gap-[7px]">
@@ -127,7 +144,7 @@
                 </a>
 
                 <!-- 202 -->
-                <div class="relative w-[408px] h-[68px] bg-[#131D2C] rounded-[11px] border border-[#4caf7d29] overflow-hidden">
+                <div class="relative w-full h-[68px] bg-[#131D2C] rounded-[11px] border border-[#4caf7d29] overflow-hidden">
                     <div class="absolute left-0 top-[8px] w-[3px] h-[52px] bg-[#4CAF7D] opacity-70 rounded-r-[2px]"></div>
                     <div class="absolute left-[18px] top-[14px] flex flex-col gap-[3px]">
                         <div class="flex items-center gap-[7px]">
@@ -148,7 +165,7 @@
                 </div>
 
                 <!-- 203 -->
-                <div class="relative w-[408px] h-[68px] bg-[#172032] rounded-[11px] border border-[#e8e0d417] overflow-hidden">
+                <div class="relative w-full h-[68px] bg-[#172032] rounded-[11px] border border-[#e8e0d417] overflow-hidden">
                     <div class="absolute left-0 top-[8px] w-[3px] h-[52px] bg-[#6FAECC] rounded-r-[2px]"></div>
                     <div class="absolute left-[18px] top-[14px] flex flex-col gap-[3px]">
                         <div class="flex items-center gap-[7px]">
@@ -169,7 +186,7 @@
                 </div>
 
                 <!-- 204 -->
-                <div class="relative w-[408px] h-[68px] bg-[#172032] rounded-[11px] border border-[#e8e0d417] overflow-hidden">
+                <div class="relative w-full h-[68px] bg-[#172032] rounded-[11px] border border-[#e8e0d417] overflow-hidden">
                     <div class="absolute left-0 top-[8px] w-[3px] h-[52px] bg-[#6FAECC] rounded-r-[2px]"></div>
                     <div class="absolute left-[18px] top-[14px] flex flex-col gap-[3px]">
                         <div class="flex items-center gap-[7px]">
@@ -190,7 +207,7 @@
                 </div>
 
                 <!-- 205 -->
-                <div class="relative w-[408px] h-[68px] bg-[#172032] rounded-[11px] border border-[#e8e0d417] overflow-hidden">
+                <div class="relative w-full h-[68px] bg-[#172032] rounded-[11px] border border-[#e8e0d417] overflow-hidden">
                     <div class="absolute left-0 top-[8px] w-[3px] h-[52px] bg-[#E05C5C] rounded-r-[2px] shadow-[0_0_6px_#e05c5c55]"></div>
                     <div class="absolute left-[18px] top-[14px] flex flex-col gap-[3px]">
                         <div class="flex items-center gap-[7px]">
@@ -212,7 +229,7 @@
                 </div>
 
                 <!-- 206 -->
-                <div class="relative w-[408px] h-[68px] bg-[#172032] rounded-[11px] border border-[#e8e0d417] overflow-hidden">
+                <div class="relative w-full h-[68px] bg-[#172032] rounded-[11px] border border-[#e8e0d417] overflow-hidden">
                     <div class="absolute left-0 top-[8px] w-[3px] h-[52px] bg-[#E05C5C] rounded-r-[2px] shadow-[0_0_6px_#e05c5c55]"></div>
                     <div class="absolute left-[18px] top-[14px] flex flex-col gap-[3px]">
                         <div class="flex items-center gap-[7px]">
@@ -234,7 +251,7 @@
                 </div>
 
                 <!-- 207 -->
-                <div class="relative w-[408px] h-[68px] bg-[#131D2C] rounded-[11px] border border-[#4caf7d29] overflow-hidden">
+                <div class="relative w-full h-[68px] bg-[#131D2C] rounded-[11px] border border-[#4caf7d29] overflow-hidden">
                     <div class="absolute left-0 top-[8px] w-[3px] h-[52px] bg-[#4CAF7D] opacity-70 rounded-r-[2px]"></div>
                     <div class="absolute left-[18px] top-[14px] flex flex-col gap-[3px]">
                         <div class="flex items-center gap-[7px]">
@@ -255,7 +272,7 @@
                 </div>
 
                 <!-- 208 -->
-                <div class="relative w-[408px] h-[68px] bg-[#131D2C] rounded-[11px] border border-[#4caf7d29] overflow-hidden">
+                <div class="relative w-full h-[68px] bg-[#131D2C] rounded-[11px] border border-[#4caf7d29] overflow-hidden">
                     <div class="absolute left-0 top-[8px] w-[3px] h-[52px] bg-[#4CAF7D] opacity-70 rounded-r-[2px]"></div>
                     <div class="absolute left-[18px] top-[14px] flex flex-col gap-[3px]">
                         <div class="flex items-center gap-[7px]">
@@ -279,7 +296,7 @@
         </div>
 
         <!-- sticky bottom bar -->
-        <div class="absolute bottom-0 w-[440px] h-[85px] bg-[#111827] border-t border-[#e8e0d414] px-[16px] pt-[13px] flex gap-[8px]">
+        <div class="absolute bottom-0 w-full h-[85px] bg-[#111827] border-t border-[#e8e0d414] px-[16px] pt-[13px] flex gap-[8px]">
             <div class="flex-1 h-[42px] bg-[#e05c5c14] border border-[#e05c5c42] rounded-[10px] flex items-center justify-center gap-[7px]">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#E05C5C" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
                 <span class="font-extrabold text-[16px] text-[#E05C5C]">3</span>

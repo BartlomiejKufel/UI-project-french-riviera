@@ -14,7 +14,7 @@
             display: flex; 
             justify-content: center; 
             align-items: center; 
-            min-height: 100vh; 
+            height: 100dvh; 
             margin: 0; 
             font-family: 'Inter', sans-serif; 
         }
@@ -26,7 +26,6 @@
             overflow: hidden; 
             display: flex; 
             flex-direction: column; 
-            /* border radius, to z figmy zajebane */
             border-radius: 45px;
             box-shadow: 0 0 0 10px #0a0f18, 0 30px 60px rgba(0,0,0,0.5);
             border: 1px solid rgba(255, 255, 255, 0.05);
@@ -37,6 +36,24 @@
         
         /* customowy popup styl */
         select { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+
+        /* Widok mobilny - wypełnia cały ekran urządzenia */
+        @media (max-width: 1024px) {
+            body {
+                background-color: #111827;
+                align-items: flex-start;
+                justify-content: flex-start;
+                height: 100dvh;
+                overflow: hidden;
+            }
+            .app-container {
+                width: 100vw;
+                height: 100dvh;
+                border-radius: 0;
+                box-shadow: none;
+                border: none;
+            }
+        }
     </style>
 </head>
 <body>
@@ -208,7 +225,7 @@
         </div>
 
         <!-- sticky botom main action -->
-        <div class="absolute bottom-0 w-[440px] px-[16px] pt-[14px] pb-[20px] bg-[#111827] border-t border-[#e8e0d414] z-20">
+        <div class="absolute bottom-0 w-full px-[16px] pt-[14px] pb-[20px] bg-[#111827] border-t border-[#e8e0d414] z-20">
             <button class="w-full h-[48px] bg-[#4caf7d12] border border-[#4caf7d3d] rounded-[11px] flex justify-center items-center gap-[10px] hover:bg-[#4caf7d20] transition-colors">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4CAF7D" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 <span class="font-bold text-[14px] text-[#4CAF7D]">Oznacz jako wykonane</span>
@@ -222,7 +239,7 @@
         <div id="modal-overlay" class="absolute inset-0 bg-black/60 z-40 hidden opacity-0 transition-opacity duration-300 pointer-events-none" onclick="closeAllModals()"></div>
 
         <!-- pop up1 dodaj notatke -->
-        <div id="modal-note" class="absolute bottom-0 left-0 w-[440px] bg-[#151E2E] rounded-t-[24px] z-50 transform translate-y-full transition-transform duration-300 shadow-[0_-10px_40px_rgba(0,0,0,0.5)] border-t border-[#e8e0d414]">
+        <div id="modal-note" class="absolute bottom-0 left-0 w-full bg-[#151E2E] rounded-t-[24px] z-50 transform translate-y-full transition-transform duration-300 shadow-[0_-10px_40px_rgba(0,0,0,0.5)] border-t border-[#e8e0d414]">
             <div class="w-full h-full px-[16px] pb-[34px] pt-[12px] flex flex-col">
                 
                 <!-- drag handle -->
@@ -255,7 +272,7 @@
         </div>
 
         <!-- popup2 zgloos problem-->
-        <div id="modal-issue" class="absolute bottom-0 left-0 w-[440px] bg-[#151E2E] rounded-t-[24px] z-50 transform translate-y-full transition-transform duration-300 shadow-[0_-10px_40px_rgba(0,0,0,0.5)] border-t border-[#e8e0d414]">
+        <div id="modal-issue" class="absolute bottom-0 left-0 w-full bg-[#151E2E] rounded-t-[24px] z-50 transform translate-y-full transition-transform duration-300 shadow-[0_-10px_40px_rgba(0,0,0,0.5)] border-t border-[#e8e0d414]">
             <div class="w-full h-full px-[16px] pb-[34px] pt-[12px] flex flex-col">
                 
                 <!-- drag handle -->
