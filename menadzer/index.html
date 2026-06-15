@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menadżer - French Riviera</title>
+    <!-- Importing base project stylesheets from relative path -->
+    <link rel="stylesheet" href="../assets/css/colors.css">
+    <link rel="stylesheet" href="../assets/css/typography.css">
+    <link rel="stylesheet" href="../assets/css/boxes.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="dashboard-container">
+
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-left">
+                <div class="logo-circle">
+                    <span>FR</span>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-title">Menadżer</span>
+                    <span class="brand-subtitle">French Riviera</span>
+                </div>
+            </div>
+
+            <div class="header-right">
+                <div class="clock-block">
+                    <div class="clock-time-row">
+                        <div class="clock-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                fill="none">
+                                <g clip-path="url(#clip0_567_532)">
+                                    <path
+                                        d="M8.00004 4V8L10.6667 9.33333M14.6667 8C14.6667 11.6819 11.6819 14.6667 8.00004 14.6667C4.31814 14.6667 1.33337 11.6819 1.33337 8C1.33337 4.3181 4.31814 1.33333 8.00004 1.33333C11.6819 1.33333 14.6667 4.3181 14.6667 8Z"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                </g>
+                                <defs>
+                            </svg>
+                        </div>
+                        <span class="clock-time">12:00:00</span>
+                    </div>
+                    <span class="clock-date">Czwartek, 14 Maja 2026</span>
+                </div>
+                <div class="user-profile">
+                    <div class="user-info">
+                        <div class="user-name">Marcin Kowalczyk</div>
+                        <div class="user-role">Menadżer</div>
+                    </div>
+                    <div class="user-avatar-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                            <circle cx="12" cy="7" r="4" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Summary Cards Grid -->
+        <section class="metrics-grid">
+
+            <!-- Card 1: Employees -->
+            <div class="metric-card green">
+                <div class="metric-content">
+                    <span class="metric-value">7</span>
+                    <span class="metric-label">Pracownicy na zmianie</span>
+                </div>
+                <div class="metric-icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16" fill="none">
+                        <g clip-path="url(#clip0_589_5769)">
+                            <path
+                                d="M14.6666 8H13.0133C12.722 7.99938 12.4384 8.09421 12.2061 8.26998C11.9737 8.44575 11.8053 8.6928 11.7266 8.97334L10.16 14.5467C10.1499 14.5813 10.1288 14.6117 10.1 14.6333C10.0711 14.655 10.036 14.6667 9.99998 14.6667C9.96392 14.6667 9.92883 14.655 9.89998 14.6333C9.87113 14.6117 9.85008 14.5813 9.83998 14.5467L6.15998 1.45334C6.14988 1.41872 6.12883 1.38831 6.09998 1.36667C6.07113 1.34503 6.03604 1.33334 5.99998 1.33334C5.96392 1.33334 5.92883 1.34503 5.89998 1.36667C5.87113 1.38831 5.85008 1.41872 5.83998 1.45334L4.27331 7.02667C4.19496 7.30611 4.02757 7.55235 3.79656 7.72801C3.56554 7.90368 3.28353 7.99917 2.99331 8H1.33331"
+                                stroke="#4CAF7D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Card 2: Tasks -->
+            <div class="metric-card blue">
+                <div class="metric-content">
+                    <span class="metric-value">17</span>
+                    <span class="metric-label">Zadania w toku</span>
+                </div>
+                <div class="metric-icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16" fill="none">
+                        <path
+                            d="M10.6666 2.66667H12C12.3536 2.66667 12.6927 2.80714 12.9428 3.05719C13.1928 3.30724 13.3333 3.64638 13.3333 4V13.3333C13.3333 13.687 13.1928 14.0261 12.9428 14.2761C12.6927 14.5262 12.3536 14.6667 12 14.6667H3.99996C3.64634 14.6667 3.3072 14.5262 3.05715 14.2761C2.8071 14.0261 2.66663 13.687 2.66663 13.3333V4C2.66663 3.64638 2.8071 3.30724 3.05715 3.05719C3.3072 2.80714 3.64634 2.66667 3.99996 2.66667H5.33329M7.99996 7.33334H10.6666M7.99996 10.6667H10.6666M5.33329 7.33334H5.33996M5.33329 10.6667H5.33996M5.99996 1.33334H9.99996C10.3681 1.33334 10.6666 1.63181 10.6666 2V3.33334C10.6666 3.70153 10.3681 4 9.99996 4H5.99996C5.63177 4 5.33329 3.70153 5.33329 3.33334V2C5.33329 1.63181 5.63177 1.33334 5.99996 1.33334Z"
+                            stroke="#6FAECC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Card 3: Today's Shifts -->
+            <div class="metric-card yellow">
+                <div class="metric-content">
+                    <span class="metric-value">2</span>
+                    <span class="metric-label">Dzisiejsze zmiany</span>
+                </div>
+                <div class="metric-icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                        <line x1="16" y1="2" x2="16" y2="6" />
+                        <line x1="8" y1="2" x2="8" y2="6" />
+                        <line x1="3" y1="10" x2="21" y2="10" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Card 4: Critical Notices -->
+            <div class="metric-card red">
+                <div class="metric-content">
+                    <span class="metric-value">4</span>
+                    <span class="metric-label">Krytyczne uwagi</span>
+                </div>
+                <div class="metric-icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                        <line x1="12" y1="9" x2="12" y2="13" />
+                        <line x1="12" y1="17" x2="12.01" y2="17" />
+                    </svg>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Main Dashboard Content -->
+
+        <!-- Department Overview (Full Width) -->
+        <section class="department-overview-section">
+            <div class="content-card">
+                <div class="card-title-section">
+                    <span class="card-subtitle-small">Przegląd działów</span>
+                </div>
+
+                <table class="department-table">
+                    <thead>
+                        <tr>
+                            <th class="col-dept">Dział</th>
+                            <th class="col-staff th-staff">Obsada</th>
+                            <th class="col-active">Aktywne sprawy</th>
+                            <th class="col-attention">Wymaga uwagi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Housekeeping -->
+                        <tr>
+                            <td>
+                                <div class="dept-cell">
+                                    <div class="dept-icon dept-housekeeping">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                            viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path
+                                                d="M10.6667 14.6667L10 12M12.6667 9.33334C12.8435 9.33334 13.0131 9.26311 13.1381 9.13808C13.2631 9.01306 13.3333 8.84349 13.3333 8.66668V8.00001C13.3333 7.64639 13.1929 7.30725 12.9428 7.0572C12.6928 6.80715 12.3536 6.66668 12 6.66668H10C9.8232 6.66668 9.65363 6.59644 9.52861 6.47141C9.40358 6.34639 9.33335 6.17682 9.33335 6.00001V2.66668C9.33335 2.31305 9.19287 1.97392 8.94282 1.72387C8.69277 1.47382 8.35364 1.33334 8.00001 1.33334C7.64639 1.33334 7.30725 1.47382 7.0572 1.72387C6.80716 1.97392 6.66668 2.31305 6.66668 2.66668V6.00001C6.66668 6.17682 6.59644 6.34639 6.47142 6.47141C6.34639 6.59644 6.17682 6.66668 6.00001 6.66668H4.00001C3.64639 6.66668 3.30725 6.80715 3.0572 7.0572C2.80716 7.30725 2.66668 7.64639 2.66668 8.00001V8.66668C2.66668 8.84349 2.73692 9.01306 2.86194 9.13808C2.98697 9.26311 3.15654 9.33334 3.33335 9.33334M12.6667 9.33334H3.33335M12.6667 9.33334L13.982 13.8447C14.0055 13.9427 14.0065 14.0448 13.9848 14.1432C13.9632 14.2416 13.9195 14.3339 13.857 14.413C13.7946 14.4921 13.715 14.556 13.6243 14.6C13.5336 14.6439 13.4341 14.6667 13.3333 14.6667H2.66668C2.56589 14.6667 2.4664 14.6439 2.3757 14.6C2.28499 14.556 2.20543 14.4921 2.14299 14.413C2.08055 14.3339 2.03687 14.2416 2.01522 14.1432C1.99357 14.0448 1.99453 13.9427 2.01801 13.8447L3.33335 9.33334M5.33335 14.6667L6.00001 12"
+                                                stroke="#E05C5C" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <span class="dept-name">Housekeeping</span>
+                                </div>
+                            </td>
+                            <td class="col-staff">
+                                <span class="staff-count">2 / 3</span>
+                            </td>
+                            <td>
+                                <span class="active-pill">5 zadań w toku</span>
+                            </td>
+                            <td>
+                                <span class="attention-status status-red">2 zadania opóźnione</span>
+                            </td>
+                        </tr>
+
+                        <!-- Kuchnia -->
+                        <tr>
+                            <td>
+                                <div class="dept-cell">
+                                    <div class="dept-icon dept-kitchen">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                            viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path
+                                                d="M3.99999 11.3333H12M11.3333 14C11.5101 14 11.6797 13.9298 11.8047 13.8047C11.9298 13.6797 12 13.5101 12 13.3333V9.76666C12 9.46199 12.2107 9.20399 12.4847 9.07266C13.052 8.80202 13.5055 8.33969 13.7651 7.76725C14.0247 7.19481 14.0738 6.54906 13.9036 5.94396C13.7335 5.33887 13.355 4.81332 12.8351 4.46009C12.3152 4.10685 11.6872 3.94862 11.062 4.01332C10.8045 3.41479 10.3772 2.90485 9.83304 2.54655C9.28884 2.18824 8.65156 1.99728 7.99999 1.99728C7.34843 1.99728 6.71115 2.18824 6.16695 2.54655C5.62274 2.90485 5.19549 3.41479 4.93799 4.01332C4.31305 3.94907 3.68549 4.10752 3.16595 4.46075C2.64641 4.81397 2.26827 5.33928 2.09818 5.94406C1.9281 6.54883 1.977 7.19424 2.23626 7.76649C2.49553 8.33874 2.9485 8.80108 3.51533 9.07199C3.78933 9.20399 3.99999 9.46199 3.99999 9.76599V13.3333C3.99999 13.5101 4.07023 13.6797 4.19526 13.8047C4.32028 13.9298 4.48985 14 4.66666 14H11.3333Z"
+                                                stroke="#D9B26B" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <span class="dept-name">Kuchnia</span>
+                                </div>
+                            </td>
+                            <td class="col-staff">
+                                <span class="staff-count">2 / 2</span>
+                            </td>
+                            <td>
+                                <span class="active-pill">6 zamówień w toku</span>
+                            </td>
+                            <td>
+                                <span class="attention-status status-yellow">1 zamówienie po czasie</span>
+                            </td>
+                        </tr>
+
+                        <!-- Recepcja -->
+                        <tr>
+                            <td>
+                                <div class="dept-cell">
+                                    <div class="dept-icon dept-reception">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                            viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path
+                                                d="M13.3333 10.6667H2.66668C2.31305 10.6667 1.97392 10.8071 1.72387 11.0572C1.47382 11.3072 1.33334 11.6464 1.33334 12V12.6667C1.33334 12.8435 1.40358 13.013 1.52861 13.1381C1.65363 13.2631 1.8232 13.3333 2.00001 13.3333H14C14.1768 13.3333 14.3464 13.2631 14.4714 13.1381C14.5964 13.013 14.6667 12.8435 14.6667 12.6667V12C14.6667 11.6464 14.5262 11.3072 14.2762 11.0572C14.0261 10.8071 13.687 10.6667 13.3333 10.6667ZM2.66668 10.6667C2.66668 9.25217 3.22858 7.89561 4.22877 6.89542C5.22897 5.89523 6.58552 5.33332 8.00001 5.33332M13.3333 10.6667C13.3333 9.25217 12.7714 7.89561 11.7712 6.89542C10.7711 5.89523 9.4145 5.33332 8.00001 5.33332M8.00001 5.33332V2.66666M6.66668 2.66666H9.33334"
+                                                stroke="#6FAECC" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <span class="dept-name">Recepcja</span>
+                                </div>
+                            </td>
+                            <td class="col-staff">
+                                <span class="staff-count">1 / 2</span>
+                            </td>
+                            <td>
+                                <span class="active-pill">2 zameldowania do obsługi</span>
+                            </td>
+                            <td>
+                                <span class="attention-status status-green">Brak krytycznych problemów</span>
+                            </td>
+                        </tr>
+
+                        <!-- Maintenance -->
+                        <tr>
+                            <td>
+                                <div class="dept-cell">
+                                    <div class="dept-icon dept-maintenance">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                            viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <g clip-path="url(#clip0_580_1315)">
+                                                <path
+                                                    d="M9.79999 4.2C9.67783 4.32462 9.60941 4.49216 9.60941 4.66667C9.60941 4.84117 9.67783 5.00871 9.79999 5.13333L10.8667 6.2C10.9913 6.32215 11.1588 6.39057 11.3333 6.39057C11.5078 6.39057 11.6754 6.32215 11.8 6.2L13.8707 4.13C14.084 3.91533 14.446 3.98333 14.526 4.27533C14.7274 5.00792 14.716 5.78271 14.4932 6.50906C14.2703 7.23541 13.8452 7.88327 13.2676 8.37682C12.69 8.87038 11.9837 9.18923 11.2315 9.29604C10.4793 9.40286 9.71218 9.29324 9.01999 8.98L3.74665 14.2533C3.48144 14.5185 3.12176 14.6674 2.74675 14.6673C2.37174 14.6672 2.01211 14.5182 1.74699 14.253C1.48186 13.9878 1.33295 13.6281 1.33301 13.2531C1.33307 12.8781 1.4821 12.5185 1.74732 12.2533L7.02065 6.98C6.70741 6.28781 6.59779 5.52072 6.70461 4.7685C6.81143 4.01628 7.13027 3.31003 7.62383 2.73241C8.11738 2.15479 8.76524 1.72967 9.49159 1.50682C10.2179 1.28396 10.9927 1.27258 11.7253 1.474C12.0173 1.554 12.0853 1.91533 11.8713 2.13L9.79999 4.2Z"
+                                                    stroke="#E05C5C" stroke-linecap="round" stroke-linejoin="round" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_580_1315">
+                                                    <rect width="16" height="16" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <span class="dept-name">Maintenance</span>
+                                </div>
+                            </td>
+                            <td class="col-staff">
+                                <span class="staff-count">1 / 2</span>
+                            </td>
+                            <td>
+                                <span class="active-pill">4 zgłoszenia w toku</span>
+                            </td>
+                            <td>
+                                <span class="attention-status status-red">2 pilne usterki</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Bottom Grid: Alerts & Go To -->
+        <section class="dashboard-bottom-grid">
+
+            <!-- Alerts Section -->
+            <div class="content-card alerts-card">
+                <div class="alerts-header">
+                    <div class="alerts-title-wrapper">
+                        <div class="alerts-title-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                                <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                            </svg>
+                        </div>
+                        <span class="card-subtitle-small">Alerty wymagające uwagi</span>
+                    </div>
+                    <span class="alerts-count-badge">4 aktywne</span>
+                </div>
+
+                <div class="alerts-list">
+                    <!-- Alert 1 -->
+                    <div class="alert-item alert-critical">
+                        <div class="alert-message-wrapper">
+                            <span class="alert-bullet"></span>
+                            <span class="alert-text">Housekeeping przekroczył 85% obciążenia - ryzyko opóźnień w
+                                sprzątaniu pokoi</span>
+                        </div>
+                        <span class="alert-badge">Krytyczne</span>
+                    </div>
+
+                    <!-- Alert 2 -->
+                    <div class="alert-item alert-urgent">
+                        <div class="alert-message-wrapper">
+                            <span class="alert-bullet"></span>
+                            <span class="alert-text">2 usterki pilnie wymagają naprawy przez konserwatora</span>
+                        </div>
+                        <span class="alert-badge">Pilne</span>
+                    </div>
+
+                    <!-- Alert 3 -->
+                    <div class="alert-item alert-urgent">
+                        <div class="alert-message-wrapper">
+                            <span class="alert-bullet"></span>
+                            <span class="alert-text">Brak pełnej obsady Recepcji na zmianie wieczornej</span>
+                        </div>
+                        <span class="alert-badge">Pilne</span>
+                    </div>
+
+                    <!-- Alert 4 -->
+                    <div class="alert-item alert-info">
+                        <div class="alert-message-wrapper">
+                            <span class="alert-bullet"></span>
+                            <span class="alert-text">Kuchnia: obłożenie zamówień prognozowane na 18:00–20:00</span>
+                        </div>
+                        <span class="alert-badge">Uwaga</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Go To Card -->
+            <div class="content-card sidebar-card">
+                <div class="sidebar-title-section">
+                    <span class="card-subtitle-small">Przejdź do</span>
+                </div>
+
+                <div class="sidebar-nav-list">
+                    <!-- Personnel link -->
+                    <a href="#" class="sidebar-nav-btn">
+                        <div class="nav-btn-left">
+                            <div class="nav-icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                    <circle cx="9" cy="7" r="4" />
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                </svg>
+                            </div>
+                            <span class="nav-label">Personel</span>
+                        </div>
+                        <div class="nav-chevron">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polyline points="9 18 15 12 9 6" />
+                            </svg>
+                        </div>
+                    </a>
+
+                    <!-- Schedule link -->
+                    <a href="#" class="sidebar-nav-btn">
+                        <div class="nav-btn-left">
+                            <div class="nav-icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 12 12"
+                                    fill="none">
+                                    <path
+                                        d="M4 1V3M8 1V3M1.5 5H10.5M2.5 2H9.5C10.0523 2 10.5 2.44772 10.5 3V10C10.5 10.5523 10.0523 11 9.5 11H2.5C1.94772 11 1.5 10.5523 1.5 10V3C1.5 2.44772 1.94772 2 2.5 2Z"
+                                        stroke="#D9B26B" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <span class="nav-label">Harmonogram</span>
+                        </div>
+                        <div class="nav-chevron">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polyline points="9 18 15 12 9 6" />
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </section>
+    </div>
+</body>
+
+</html>
