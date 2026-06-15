@@ -1,0 +1,115 @@
+/* Title & Search Bar section */
+.title-search-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+    margin-top: var(--space-8);
+    margin-bottom: var(--space-4);
+}
+
+.page-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: #E8E0D4;
+    letter-spacing: 0.5px;
+}
+
+.search-container {
+    position: relative;
+    width: 300px;
+    height: 40px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    color: #4E5C6EBF;
+}
+
+.search-input {
+    width: 100%;
+    height: 100%;
+    background-color: #121c2f;
+    border: 1px solid rgba(111, 174, 204, 0.2);
+    border-radius: 10px;
+    padding: 0 16px 0 40px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #C8C0B8;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.search-input::placeholder {
+    color: rgba(111, 174, 204, 0.4);
+}
+
+.search-input:focus {
+    border-color: rgba(111, 174, 204, 0.5);
+}
+
+/* Personel Table & Status Pills */
+.personel-table th {
+    font-size: 11px;
+    font-weight: 600;
+    color: #4E5C6E;
+    letter-spacing: 1px;
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.personel-table td {
+    padding: 20px 16px;
+    color: #D4CDC5;
+    font-size: 14px;
+}
+
+.personel-table td:nth-child(2),
+.personel-table td:nth-child(4),
+.personel-table td:nth-child(5) {
+    color: #7A8A9A;
+}
+
+.personel-table th:not(:first-child),
+.personel-table td:not(:first-child) {
+    text-align: center;
+}
+
+.personel-table td:last-child {
+    color: #D9B26B;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.status-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid transparent;
+}
+
+.status-pill.green {
+    background-color: rgba(76, 175, 125, 0.09);
+    border-color: rgba(76, 175, 125, 0.2);
+    color: #4CAF7D;
+}
+
+.status-pill.blue {
+    background-color: rgba(111, 174, 204, 0.09);
+    border-color: rgba(111, 174, 204, 0.2);
+    color: #6FAECC;
+}
+
+.status-pill.yellow {
+    background-color: rgba(217, 178, 107, 0.09);
+    border-color: rgba(217, 178, 107, 0.2);
+    color: #D9B26B;
+}
