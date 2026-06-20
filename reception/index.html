@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recepcja — Lazurowe Wybrzeże</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="app">
+    <!-- Header -->
+    <header class="header">
+      <div class="header__brand">
+        <div class="header__logo">FR</div>
+        <div>
+          <div class="header__title">Recepcja</div>
+          <div class="header__subtitle">LAZUROWE WYBRZEŻE</div>
+        </div>
+      </div>
+      <div class="header__divider"></div>
+      <div class="header__search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" placeholder="Szukaj pokoju lub nazwiska gościa..." readonly>
+      </div>
+      <div class="header__spacer"></div>
+      <div class="header__clock">
+        <div class="header__time">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <span id="clock">12:00:00</span>
+        </div>
+        <div class="header__date">czwartek, 14 maja 2026</div>
+      </div>
+      <div class="header__divider"></div>
+      <div class="header__user">
+        <div class="header__user-info">
+          <div class="header__user-name">Marta Wiśniewska</div>
+          <div class="header__user-role">Recepcjonistka</div>
+        </div>
+        <div class="header__avatar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+      </div>
+    </header>
+
+    <!-- Stats -->
+    <section class="stats">
+      <div class="stat-card stat-card--free">
+        <span class="stat-card__number">12</span>
+        <div>
+          <div class="stat-card__label">Wolne</div>
+          <div class="stat-card__sublabel">Pokoje dostępne</div>
+        </div>
+        <div class="stat-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8"/><path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"/><path d="M12 4v6"/><path d="M2 18h20"/></svg>
+        </div>
+      </div>
+      <div class="stat-card stat-card--occupied">
+        <span class="stat-card__number">18</span>
+        <div>
+          <div class="stat-card__label">Zajęte</div>
+          <div class="stat-card__sublabel">Aktywne zameldowania</div>
+        </div>
+        <div class="stat-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+      </div>
+      <div class="stat-card stat-card--cleaning">
+        <span class="stat-card__number">5</span>
+        <div>
+          <div class="stat-card__label">Do sprzątania</div>
+          <div class="stat-card__sublabel">Oczekuje na obsługę hotelową</div>
+        </div>
+        <div class="stat-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+        </div>
+      </div>
+      <div class="stat-card stat-card--fault">
+        <span class="stat-card__number">2</span>
+        <div>
+          <div class="stat-card__label">Awaria</div>
+          <div class="stat-card__sublabel">Wymaga interwencji</div>
+        </div>
+        <div class="stat-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main -->
+    <main class="main">
+      <div class="main__rooms">
+        <div class="filters">
+          <select class="filter-select"><option>Numer piętra</option></select>
+          <select class="filter-select"><option>Liczba gości</option></select>
+          <select class="filter-select"><option>Typ pokoju</option></select>
+        </div>
+        <div class="rooms-layout">
+          <div class="rooms-wrapper">
+            <div class="room-grid" id="roomGrid"></div>
+          </div>
+          <div class="scroll-rail" id="scrollRail" aria-hidden="true">
+            <div class="scroll-rail__inner">
+              <button class="scroll-rail__arrow scroll-rail__arrow--up" type="button" aria-label="Przewiń w górę">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 15-6-6-6 6"/></svg>
+              </button>
+              <div class="scroll-rail__track">
+                <div class="scroll-rail__thumb" id="scrollThumb"></div>
+              </div>
+              <button class="scroll-rail__arrow scroll-rail__arrow--down" type="button" aria-label="Przewiń w dół">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar__body">
+          <div class="sidebar__header">
+            <div class="sidebar__room-num" id="sidebarRoom">204</div>
+            <div class="sidebar__meta">
+              <div class="sidebar__status" id="sidebarStatus">Zajęty</div>
+              <div class="sidebar__floor">
+                <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 17h5l-1.4-1.4A2 2 0 0 1 16 14.2V9a4 4 0 1 0-8 0v5.2a2 2 0 0 1-.6 1.4L6 17h5"/><path d="M12 22v-5"/></svg>
+                Piętro <span id="sidebarFloor">2</span>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar__divider"></div>
+
+          <div class="guest-block">
+            <div class="section-title">Gość</div>
+            <div class="guest-card">
+              <div class="guest-card__avatar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <div class="guest-card__name" id="sidebarGuest">Jan Nowak</div>
+            </div>
+
+            <div class="date-row">
+              <div class="date-box">
+                <div class="date-box__label">Zameldowanie</div>
+                <div class="date-box__value">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  <span id="sidebarCheckIn">15.06.2026</span>
+                </div>
+              </div>
+              <div class="date-box">
+                <div class="date-box__label">Wymeldowanie</div>
+                <div class="date-box__value">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  <span id="sidebarCheckOut">19.06.2026</span>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn btn--contact-inline" id="btnContact" type="button">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Kontakt z gościem
+            </button>
+          </div>
+
+          <div class="section-title">Aktywne zgłoszenia</div>
+          <div class="request-list" id="sidebarRequests">
+            <div class="request-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+              Wymiana ręczników
+            </div>
+          </div>
+
+          <div class="section-title">Aktywne usługi</div>
+          <div class="tag-list" id="sidebarServices">
+            <span class="tag">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+              Kort tenisowy
+            </span>
+            <span class="tag">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
+              Room Service
+            </span>
+          </div>
+
+          <div class="section-title">Uwagi</div>
+          <div class="notes-box" id="sidebarNotes">Gość ma wliczone śniadania wyłącznie w dwóch pierwszych dniach pobytu (16 i 17 maja). Od 18 maja pobyt bez śniadań.</div>
+        </div>
+
+        <div class="sidebar__actions">
+          <div class="btn-row">
+            <button class="btn btn--checkin" id="btnCheckIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+              Check-in
+            </button>
+            <button class="btn btn--checkout" id="btnCheckOut">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+              Check-out
+            </button>
+          </div>
+          <button class="btn btn--details" id="btnRoomDetails">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+            Szczegóły pokoju
+          </button>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <!-- Overlay: Kontakt z gościem -->
+  <div class="overlay overlay--guest" id="overlayGuest">
+    <div class="guest-call-modal">
+      <div class="guest-call-modal__top-line"></div>
+      <div class="guest-call-modal__header">
+        <h2 class="guest-call-modal__title">Kontakt z gościem</h2>
+        <p class="guest-call-modal__subtitle">Obsługa gościa</p>
+      </div>
+      <div class="guest-call-modal__divider"></div>
+      <div class="guest-call-modal__body">
+        <div class="call-icon-wrap">
+          <span class="call-ring" aria-hidden="true"></span>
+          <div class="call-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+        </div>
+        <div class="call-room-block">
+          <p class="call-room-label">Pokój</p>
+          <p class="call-room-number">204</p>
+          <p class="call-room-ext">Numer wewnętrzny</p>
+        </div>
+        <button class="btn-hangup" data-close="overlayGuest" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.68 13.31a16 16 0 0 0 3.41 2.6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7 2 2 0 0 1 1.72 2v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 4.11 4.11 2 2 0 0 1 6.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91"/><line x1="2" y1="2" x2="22" y2="22"/></svg>
+          Rozłącz
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Overlay: Check-in -->
+  <div class="overlay" id="overlayCheckIn">
+    <div class="modal modal--checkin modal--green">
+      <div class="modal__header">
+        <div>
+          <div class="modal__title-row">
+            <div class="modal__icon-box modal__icon-box--green">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+            </div>
+            <h2 class="modal__title">Check-in</h2>
+            <span class="modal__title-sub">/ Pokój 201</span>
+          </div>
+          <div class="modal__badge modal__badge--green">Gotowy do zameldowania</div>
+        </div>
+        <button class="overlay__close" data-close="overlayCheckIn" aria-label="Zamknij">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+      <div class="modal__body">
+        <div class="modal__columns">
+          <div>
+            <div class="modal-section">
+              <div class="modal-section__head"><span>Rezerwacja</span></div>
+              <div class="info-row"><span class="info-row__label">Numer rezerwacji</span><span class="info-row__value">FR-240615-201</span></div>
+              <div class="info-row"><span class="info-row__label">Gość główny</span><span class="info-row__value">Kamil Labudda</span></div>
+              <div class="info-row"><span class="info-row__label">Liczba gości</span><span class="info-row__value">2 osoby</span></div>
+              <div class="info-row"><span class="info-row__label">Typ pokoju</span><span class="info-row__value">Standard</span></div>
+              <div class="info-row"><span class="info-row__label">Data przyjazdu</span><span class="info-row__value info-row__value--green">15.06.2026</span></div>
+              <div class="info-row"><span class="info-row__label">Data wyjazdu</span><span class="info-row__value info-row__value--gold">19.06.2026</span></div>
+              <div class="info-row"><span class="info-row__label">Długość pobytu</span><span class="info-row__value">4 noce</span></div>
+            </div>
+            <div class="modal-section">
+              <div class="modal-section__head"><span>Dane gościa</span></div>
+              <div class="field-group">
+                <div class="field-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Imię i nazwisko</div>
+                <input class="field-input" value="Kamil Labudda" readonly>
+              </div>
+              <div class="field-group">
+                <div class="field-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Numer telefonu</div>
+                <input class="field-input" value="+48 777 777 777" readonly>
+              </div>
+              <div class="field-group">
+                <div class="field-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> E-mail</div>
+                <input class="field-input" value="budda@email.com" readonly>
+              </div>
+              <div class="field-group">
+                <div class="field-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="14" x="3" y="5" rx="2"/><path d="M7 9h10"/><path d="M7 13h6"/></svg> Dokument tożsamości</div>
+                <input class="field-input" value="KLB 677766" readonly>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="modal-section">
+              <div class="modal-section__head"><span>Szczegóły pobytu</span></div>
+              <div class="toggle-row">
+                <div class="toggle-row__left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg> Śniadanie</div>
+                <div class="toggle is-on" role="switch" aria-checked="true"></div>
+              </div>
+              <div class="toggle-row">
+                <div class="toggle-row__left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg> Parking</div>
+                <div class="toggle" role="switch" aria-checked="false"></div>
+              </div>
+              <div style="padding:8px 14px">
+                <div class="field-label">Uwagi specjalne</div>
+                <textarea class="field-textarea" readonly>Brak uwag</textarea>
+              </div>
+            </div>
+            <div class="modal-section">
+              <div class="modal-section__head"><span>Informacje dodatkowe</span></div>
+              <div class="status-dot-row"><span class="status-dot-row__label">Status pokoju</span><span class="status-dot-row__value status-dot-row__value--green">Wolny</span></div>
+              <div class="status-dot-row"><span class="status-dot-row__label">Housekeeping</span><span class="status-dot-row__value status-dot-row__value--green">Czysty</span></div>
+              <div class="status-dot-row"><span class="status-dot-row__label">Maintenance</span><span class="status-dot-row__value status-dot-row__value--green">Brak usterek</span></div>
+            </div>
+            <div class="modal-section">
+              <div class="modal-section__head"><span>Płatność</span></div>
+              <div class="payment-box">
+                <div class="payment-summary">
+                  <div class="payment-summary__icon payment-summary__icon--green">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg>
+                  </div>
+                  <span class="payment-summary__label payment-summary__label--green">Płatność przyjęta</span>
+                  <span class="payment-summary__amount">1 800 zł</span>
+                </div>
+                <div class="pay-toggle-row">
+                  <button class="pay-toggle is-active--green">Uregulowano</button>
+                  <button class="pay-toggle">Nie uregulowano</button>
+                </div>
+                <div class="field-label">Metoda płatności</div>
+                <select class="select-field"><option>Karta płatnicza</option></select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal__footer">
+        <button class="btn-confirm btn-confirm--green">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+          Potwierdź check-in
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Overlay: Check-out -->
+  <div class="overlay" id="overlayCheckOut">
+    <div class="modal modal--checkout modal--gold">
+      <div class="modal__header">
+        <div>
+          <div class="modal__title-row">
+            <div class="modal__icon-box modal__icon-box--gold">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+            </div>
+            <h2 class="modal__title">Check-out</h2>
+            <span class="modal__title-sub">/ Pokój 204</span>
+          </div>
+          <div class="modal__badge modal__badge--gold">Gotowy do wymeldowania</div>
+        </div>
+        <button class="overlay__close" data-close="overlayCheckOut" aria-label="Zamknij">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+      <div class="modal__body">
+        <div class="modal__columns">
+          <div>
+            <div class="modal-section">
+              <div class="modal-section__head"><span>Podsumowanie pobytu</span></div>
+              <div class="info-row"><span class="info-row__label">Numer rezerwacji</span><span class="info-row__value">FR-242315-204</span></div>
+              <div class="info-row"><span class="info-row__label">Gość główny</span><span class="info-row__value">Jan Nowak</span></div>
+              <div class="info-row"><span class="info-row__label">Liczba gości</span><span class="info-row__value">2 osoby</span></div>
+              <div class="info-row"><span class="info-row__label">Typ pokoju</span><span class="info-row__value">Deluxe Sea View</span></div>
+              <div class="info-row"><span class="info-row__label">Zameldowanie</span><span class="info-row__value info-row__value--green">15.06.2026</span></div>
+              <div class="info-row"><span class="info-row__label">Wymeldowanie</span><span class="info-row__value info-row__value--gold">19.06.2026</span></div>
+              <div class="info-row"><span class="info-row__label">Długość pobytu</span><span class="info-row__value">4 noce</span></div>
+            </div>
+            <div class="modal-section">
+              <div class="modal-section__head"><span>Usługi i rozliczenie</span></div>
+              <div style="padding:2px 14px 8px">
+                <div class="service-row">
+                  <div class="service-row__left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg> Room Service</div>
+                  <span class="service-row__status service-row__status--done">Dostarczone</span>
+                </div>
+                <div class="service-row">
+                  <div class="service-row__left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg> Kort tenisowy</div>
+                  <span class="service-row__status service-row__status--pending">Do rozliczenia</span>
+                </div>
+                <div class="service-row">
+                  <div class="service-row__left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h3"/><path d="M14 2v6h6"/><path d="M10 12H8"/><path d="M16 12h-2"/><path d="M12 17H8"/></svg> Minibar</div>
+                  <span class="service-row__status service-row__status--pending">Do rozliczenia</span>
+                </div>
+                <div class="service-cost"><span>Kort tenisowy</span><span>120 zł</span></div>
+                <div class="service-cost"><span>Minibar</span><span>40 zł</span></div>
+                <div class="total-box">
+                  <span class="total-box__label">Łącznie do zapłaty</span>
+                  <span class="total-box__amount">160 zł</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="modal-section">
+              <div class="modal-section__head"><span>Płatność</span></div>
+              <div class="payment-box">
+                <div class="payment-summary">
+                  <div class="payment-summary__icon payment-summary__icon--gold">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg>
+                  </div>
+                  <span class="payment-summary__label payment-summary__label--gold">Do zapłaty</span>
+                  <span class="payment-summary__amount">160 zł</span>
+                </div>
+                <div class="pay-toggle-row">
+                  <button class="pay-toggle">Uregulowano</button>
+                  <button class="pay-toggle is-active--gold">Nie uregulowano</button>
+                </div>
+                <div class="field-label">Metoda płatności</div>
+                <select class="select-field"><option>Gotówka</option></select>
+              </div>
+            </div>
+            <div class="modal-section">
+              <div class="modal-section__head"><span>Stan pokoju po wymeldowaniu</span></div>
+              <div class="status-dot-row"><span class="status-dot-row__label">Status pokoju</span><span class="status-dot-row__value status-dot-row__value--gold">Do sprzątania</span></div>
+              <div class="status-dot-row"><span class="status-dot-row__label">Housekeeping</span><span class="status-dot-row__value status-dot-row__value--gold">Wymaga sprzątania</span></div>
+              <div class="status-dot-row"><span class="status-dot-row__label">Maintenance</span><span class="status-dot-row__value status-dot-row__value--green">Brak usterek</span></div>
+            </div>
+            <div class="modal-section">
+              <div class="modal-section__head"><span>Uwagi recepcji</span></div>
+              <div style="padding:14px"><textarea class="field-textarea" style="min-height:103px" placeholder=""></textarea></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal__footer">
+        <button class="btn-confirm btn-confirm--gold">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          Potwierdź check-out
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Overlay: Szczegóły pokoju 204 -->
+  <div class="overlay" id="overlayRoomInfo">
+    <div class="modal modal--room-info modal--gold">
+      <div class="modal__header">
+        <div>
+          <div class="modal__eyebrow">Informacje o pokoju</div>
+          <div class="modal__title-row">
+            <h2 class="modal__room-title">Pokój 204</h2>
+            <span class="room-type-badge">Deluxe Sea View</span>
+          </div>
+        </div>
+        <button class="overlay__close" data-close="overlayRoomInfo" aria-label="Zamknij">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+      <div class="modal__body">
+        <div class="modal__columns">
+          <div>
+            <div class="modal-section">
+              <div class="modal-section__head"><span>Podstawowe informacje</span></div>
+              <div class="info-row"><span class="info-row__label">Numer pokoju</span><span class="info-row__value">204</span></div>
+              <div class="info-row"><span class="info-row__label">Typ pokoju</span><span class="info-row__value">Deluxe Sea View</span></div>
+              <div class="info-row"><span class="info-row__label">Cena za dobę</span><span class="info-row__value">od 540 zł</span></div>
+              <div class="info-row"><span class="info-row__label">Liczba gości</span><span class="info-row__value">2 osoby</span></div>
+              <div class="info-row"><span class="info-row__label">Powierzchnia</span><span class="info-row__value">28 m²</span></div>
+              <div class="info-row"><span class="info-row__label">Łóżko</span><span class="info-row__value">1 łóżko double size</span></div>
+            </div>
+            <div class="modal-section">
+              <div class="modal-section__head"><span>Opis pokoju</span></div>
+              <p class="room-desc">Elegancki pokój z widokiem na Morze Śródziemne, urządzony w stylu nowoczesnym z akcentami luksusowymi. Przestronne łóżko double size, balkon z widokiem na morze oraz w pełni wyposażona łazienka. Idealne miejsce na pobyt w dwie osoby.</p>
+            </div>
+          </div>
+          <div>
+            <div class="modal-section">
+              <div class="modal-section__head"><span>Udogodnienia</span></div>
+              <div class="amenity-tags">
+                <span class="amenity-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h.01"/><path d="M2 8.82a15 15 0 0 1 20 0"/><path d="M5 12.859a10 10 0 0 1 14 0"/><path d="M8.5 16.429a5 5 0 0 1 7 0"/></svg> Wi-Fi</span>
+                <span class="amenity-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 12H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 8h12"/><path d="M18.5 8v10a2 2 0 0 1-2 2h-9a2 2 0 0 1-2-2V8"/></svg> Klimatyzacja</span>
+                <span class="amenity-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="15" x="2" y="7" rx="2"/><polyline points="17 2 12 7 7 2"/></svg> Telewizor</span>
+                <span class="amenity-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h3"/><path d="M10 12H8"/><path d="M16 12h-2"/></svg> Minibar</span>
+                <span class="amenity-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Sejf</span>
+                <span class="amenity-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 9V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4"/><path d="M2 15v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4"/><path d="M12 9v12"/></svg> Żelazko</span>
+                <span class="amenity-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 4h3a2 2 0 0 1 2 2v14"/><path d="M2 20h3"/><path d="M13 20h9"/><path d="M10 12v.01"/><path d="M13 4.562v16.157a1 1 0 0 1-1.242.97L5 20V5.562a2 2 0 0 1 1.515-1.94l4-1A2 2 0 0 1 13 4.561Z"/></svg> Balkon</span>
+                <span class="amenity-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg> Widok na morze</span>
+              </div>
+            </div>
+            <div class="modal-section">
+              <div class="modal-section__head"><span>Informacje dodatkowe</span></div>
+              <div class="status-dot-row"><span class="status-dot-row__label">Status pokoju</span><span class="status-dot-row__value status-dot-row__value--blue">Zajęty</span></div>
+              <div class="status-dot-row"><span class="status-dot-row__label">Housekeeping</span><span class="status-dot-row__value status-dot-row__value--green">Czysty</span></div>
+              <div class="status-dot-row"><span class="status-dot-row__label">Maintenance</span><span class="status-dot-row__value status-dot-row__value--green">Brak usterek</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/rooms.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+const ROOMS = [
+  { id: 201, type: "Standard", status: "wolny", statusLabel: "Wolny", guest: null, date: null },
+  { id: 202, type: "Standard", status: "zajety", statusLabel: "Zajęty", guest: "Anna Lewandowska", date: "18.06" },
+  { id: 203, type: "Standard", status: "sprzatanie", statusLabel: "Do sprzątania", guest: "Oczekuje na obsługę hotelową", date: null },
+  { id: 204, type: "Deluxe", status: "zajety", statusLabel: "Zajęty", guest: "Jan Nowak", date: "19.06", selected: true },
+  { id: 205, type: "Standard", status: "awaria", statusLabel: "Awaria", guest: "Wymaga interwencji", date: null },
+  { id: 206, type: "Deluxe", status: "zajety", statusLabel: "Zajęty", guest: "Emilia Wójcik", date: "17.06" },
+  { id: 207, type: "Standard", status: "wolny", statusLabel: "Wolny", guest: null, date: null },
+  { id: 208, type: "Standard", status: "zajety", statusLabel: "Zajęty", guest: "Robert Podolski", date: "20.06" },
+  { id: 209, type: "Standard", status: "sprzatanie", statusLabel: "Do sprzątania", guest: "Tomasz Górski", date: "17.06" },
+  { id: 210, type: "Deluxe", status: "zajety", statusLabel: "Zajęty", guest: "Maria Gąska", date: "21.06" },
+  { id: 211, type: "Standard", status: "wolny", statusLabel: "Wolny", guest: null, date: null },
+  { id: 212, type: "Deluxe", status: "zajety", statusLabel: "Zajęty", guest: "Piotr Nowak", date: "22.06" },
+  { id: 213, type: "Standard", status: "zajety", statusLabel: "Zajęty", guest: "Hanna Puchalska", date: "20.06" },
+  { id: 301, type: "Standard", status: "wolny", statusLabel: "Wolny", guest: null, date: null },
+  { id: 302, type: "Standard", status: "zajety", statusLabel: "Zajęty", guest: "Roksana Kwiatkowska", date: "18.06" },
+  { id: 303, type: "Deluxe", status: "sprzatanie", statusLabel: "Do sprzątania", guest: "Oczekuje na obsługę hotelową", date: null },
+  { id: 304, type: "Deluxe", status: "awaria", statusLabel: "Awaria", guest: "Wymaga interwencji", date: null },
+  { id: 305, type: "Deluxe", status: "zajety", statusLabel: "Zajęty", guest: "Michał Anioł", date: "20.06" },
+  { id: 306, type: "Standard", status: "wolny", statusLabel: "Wolny", guest: null, date: null },
+  { id: 307, type: "Suite", status: "zajety", statusLabel: "Zajęty", guest: "Karol Wiśniewski", date: "23.06" },
+  { id: 308, type: "Suite", status: "sprzatanie", statusLabel: "Do sprzątania", guest: "Oczekuje na obsługę hotelową", date: null },
+  { id: 309, type: "Suite", status: "zajety", statusLabel: "Zajęty", guest: "Sebastian Czekaj", date: "22.06" },
+  { id: 401, type: "Standard", status: "wolny", statusLabel: "Wolny", guest: null, date: null },
+  { id: 402, type: "Deluxe", status: "zajety", statusLabel: "Zajęty", guest: "Katarzyna Nowak", date: "19.06" },
+  { id: 403, type: "Standard", status: "zajety", statusLabel: "Zajęty", guest: "Adam Kowalski", date: "18.06" },
+  { id: 404, type: "Deluxe", status: "zajety", statusLabel: "Zajęty", guest: "Ewa Malinowska", date: "21.06" },
+  { id: 405, type: "Suite", status: "sprzatanie", statusLabel: "Do sprzątania", guest: "Oczekuje na obsługę hotelową", date: null }
+];
+
+const SIDEBAR_204 = {
+  room: 204,
+  floor: 2,
+  status: "Zajęty",
+  guest: "Jan Nowak",
+  checkIn: "15.06.2026",
+  checkOut: "19.06.2026",
+  requests: ["Wymiana ręczników"],
+  services: ["Kort tenisowy", "Room Service"],
+  notes: "Gość ma wliczone śniadania wyłącznie w dwóch pierwszych dniach pobytu (16 i 17 maja). Od 18 maja pobyt bez śniadań."
+};
