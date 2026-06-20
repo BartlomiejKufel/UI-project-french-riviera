@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harmonogram - French Riviera</title>
+    <link rel="stylesheet" href="../assets/css/colors.css">
+    <link rel="stylesheet" href="../assets/css/typography.css">
+    <link rel="stylesheet" href="../assets/css/boxes.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="harmonogram.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="dashboard-container">
+
+        <header class="dashboard-header">
+            <a href="index.html" class="header-left" style="text-decoration: none; color: inherit;">
+                <div class="logo-circle">
+                    <span>FR</span>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-title">Menadżer</span>
+                    <span class="brand-subtitle">French Riviera</span>
+                </div>
+            </a>
+
+            <div class="header-right">
+                <div class="clock-block">
+                    <div class="clock-time-row">
+                        <div class="clock-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                fill="none">
+                                <g clip-path="url(#clip0_567_532)">
+                                    <path
+                                        d="M8.00004 4V8L10.6667 9.33333M14.6667 8C14.6667 11.6819 11.6819 14.6667 8.00004 14.6667C4.31814 14.6667 1.33337 11.6819 1.33337 8C1.33337 4.3181 4.31814 1.33333 8.00004 1.33333C11.6819 1.33333 14.6667 4.3181 14.6667 8Z"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                                </g>
+                            </svg>
+                        </div>
+                        <span class="clock-time">12:00:00</span>
+                    </div>
+                    <span class="clock-date">Czwartek, 14 Maja 2026</span>
+                </div>
+                <div class="user-profile">
+                    <div class="user-info">
+                        <div class="user-name">Marcin Kowalczyk</div>
+                        <div class="user-role">Menadżer</div>
+                    </div>
+                    <div class="user-avatar-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                            <circle cx="12" cy="7" r="4" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="schedule-nav-section">
+            <div class="nav-buttons-group">
+                <button class="nav-arrow-btn nav-prev-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <path d="M7.5 9L4.5 6L7.5 3" stroke="#6A7A8A" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    Poprzedni dzień
+                </button>
+                <button class="nav-today-btn active">Dzisiaj</button>
+                <button class="nav-arrow-btn nav-next-btn">
+                    Następny dzień
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <path d="M4.5 3L7.5 6L4.5 9" stroke="#6A7A8A" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+            <div class="schedule-date-display">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span class="schedule-date-text">14 maja 2026</span>
+            </div>
+        </section>
+
+        <div class="schedule-split-layout">
+            <section class="timeline-container-card">
+                <div class="timeline-header-row">
+                    <div class="header-corner-spacer"></div>
+                    <div class="timeline-column-header">
+                        <span class="day-name">Czw</span>
+                        <span class="day-date">14.05</span>
+                        <span class="day-dot"></span>
+                    </div>
+                </div>
+
+                <div class="timeline-grid-wrapper">
+                    <div class="timeline-grid" id="timeline-grid">
+                    </div>
+                </div>
+            </section>
+
+            <section class="details-panel-card">
+                <h2 class="panel-title">Szczegóły zmiany</h2>
+
+                <form class="shift-details-form" id="shift-form">
+                    <input type="hidden" id="shift-id" value="">
+
+                    <div class="form-group">
+                        <label for="shift-worker">Pracownik</label>
+                        <div class="select-wrapper">
+                            <select id="shift-worker" required>
+                                <option value="" disabled selected>Wybierz pracownika</option>
+                                <option value="Karolina Sowa">Karolina Sowa</option>
+                                <option value="Zofia Wróbel">Zofia Wróbel</option>
+                                <option value="Ewa Dąbrowska">Ewa Dąbrowska</option>
+                                <option value="Michał Nowak">Michał Nowak</option>
+                                <option value="Marek Jabłoński">Marek Jabłoński</option>
+                                <option value="Katarzyna Wiśniewska">Katarzyna Wiśniewska</option>
+                                <option value="Marta Wiśniewska">Marta Wiśniewska</option>
+                                <option value="Rafał Krawczyk">Rafał Krawczyk</option>
+                                <option value="Piotr Zieliński">Piotr Zieliński</option>
+                                <option value="Tomasz Lis">Tomasz Lis</option>
+                                <option value="Anna Kowalczyk">Anna Kowalczyk</option>
+                            </select>
+                            <svg class="select-chevron" xmlns="http://www.w3.org/2000/svg" width="9" height="9"
+                                viewBox="0 0 9 9" fill="none">
+                                <path d="M2.25 3.375L4.5 5.625L6.75 3.375" stroke="#4A5A6A" stroke-width="0.75"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="shift-dept">Dział</label>
+                        <div class="select-wrapper">
+                            <select id="shift-dept" required>
+                                <option value="" disabled selected>Wybierz dział</option>
+                                <option value="Housekeeping">Housekeeping</option>
+                                <option value="Kuchnia">Kuchnia</option>
+                                <option value="Recepcja">Recepcja</option>
+                                <option value="Maintenance">Maintenance</option>
+                                <option value="Administracja">Administracja</option>
+                            </select>
+                            <svg class="select-chevron" xmlns="http://www.w3.org/2000/svg" width="9" height="9"
+                                viewBox="0 0 9 9" fill="none">
+                                <path d="M2.25 3.375L4.5 5.625L6.75 3.375" stroke="#4A5A6A" stroke-width="0.75"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="shift-date">Data</label>
+                        <div class="select-wrapper">
+                            <select id="shift-date" required>
+                                <option value="2026-05-14" selected>14 maja 2026</option>
+                                <option value="2026-05-15">15 maja 2026</option>
+                                <option value="2026-05-16">16 maja 2026</option>
+                            </select>
+                            <svg class="select-chevron" xmlns="http://www.w3.org/2000/svg" width="9" height="9"
+                                viewBox="0 0 9 9" fill="none">
+                                <path d="M2.25 3.375L4.5 5.625L6.75 3.375" stroke="#4A5A6A" stroke-width="0.75"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="form-row-double">
+                        <div class="form-group">
+                            <label for="shift-start">Godz. od</label>
+                            <div class="select-wrapper">
+                                <select id="shift-start" required>
+                                    <option value="07:00">07:00</option>
+                                    <option value="08:00">08:00</option>
+                                    <option value="09:00">09:00</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="13:00">13:00</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="15:00">15:00</option>
+                                    <option value="16:00">16:00</option>
+                                    <option value="17:00">17:00</option>
+                                    <option value="18:00">18:00</option>
+                                    <option value="19:00">19:00</option>
+                                    <option value="20:00">20:00</option>
+                                    <option value="21:00">21:00</option>
+                                    <option value="22:00">22:00</option>
+                                </select>
+                                <svg class="select-chevron" xmlns="http://www.w3.org/2000/svg" width="9" height="9"
+                                    viewBox="0 0 9 9" fill="none">
+                                    <path d="M2.25 3.375L4.5 5.625L6.75 3.375" stroke="#4A5A6A" stroke-width="0.75"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="shift-end">Godz. do</label>
+                            <div class="select-wrapper">
+                                <select id="shift-end" required>
+                                    <option value="08:00">08:00</option>
+                                    <option value="09:00">09:00</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="13:00">13:00</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="15:00">15:00</option>
+                                    <option value="16:00">16:00</option>
+                                    <option value="17:00">17:00</option>
+                                    <option value="18:00">18:00</option>
+                                    <option value="19:00">19:00</option>
+                                    <option value="20:00">20:00</option>
+                                    <option value="21:00">21:00</option>
+                                    <option value="22:00">22:00</option>
+                                    <option value="23:00">23:00</option>
+                                </select>
+                                <svg class="select-chevron" xmlns="http://www.w3.org/2000/svg" width="9" height="9"
+                                    viewBox="0 0 9 9" fill="none">
+                                    <path d="M2.25 3.375L4.5 5.625L6.75 3.375" stroke="#4A5A6A" stroke-width="0.75"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="shift-duration">Czas trwania</label>
+                        <input type="text" id="shift-duration" class="form-input-disabled" readonly value="8 godzin">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="shift-status">Status</label>
+                        <div class="select-wrapper">
+                            <select id="shift-status" required>
+                                <option value="Planowana" selected>Planowana</option>
+                                <option value="Na zmianie">Na zmianie</option>
+                                <option value="Zakończona">Zakończona</option>
+                            </select>
+                            <svg class="select-chevron" xmlns="http://www.w3.org/2000/svg" width="9" height="9"
+                                viewBox="0 0 9 9" fill="none">
+                                <path d="M2.25 3.375L4.5 5.625L6.75 3.375" stroke="#4A5A6A" stroke-width="0.75"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="shift-note">Notatka</label>
+                        <textarea id="shift-note" placeholder="Dodaj notatkę..."></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-action-save">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                                <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                                <polyline points="7 3 7 8 15 8"></polyline>
+                            </svg>
+                            Zapisz zmianę
+                        </button>
+                        <button type="button" class="btn-action-delete" id="btn-delete-shift">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polyline points="3 6 5 6 21 6"></polyline>
+                                <path
+                                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                </path>
+                                <line x1="10" y1="11" x2="10" y2="17"></line>
+                                <line x1="14" y1="11" x2="14" y2="17"></line>
+                            </svg>
+                            Usuń zmianę
+                        </button>
+                    </div>
+                </form>
+            </section>
+        </div>
+
+    </div>
+
+    <script src="harmonogram.js"></script>
+</body>
+
+</html>

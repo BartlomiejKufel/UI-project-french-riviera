@@ -1,4 +1,3 @@
-// Dane pracowników w tablicy JS
 const employees = [
     { name: "Anna Kowalczyk", department: "Menadżer", status: "Urlop", statusClass: "yellow", shift: "Urlop", phone: "+48 111 222 333", salary: "8500 zł" },
     { name: "Michał Nowak", department: "Kuchnia", status: "Na zmianie", statusClass: "green", shift: "7:00 - 15:00", phone: "+48 222 333 444", salary: "5300 zł" },
@@ -14,7 +13,6 @@ const employees = [
     { name: "Marcin Kowalczyk", department: "Menadżer", status: "Urlop", statusClass: "yellow", shift: "Urlop", phone: "+48 444 333 444", salary: "9800 zł" }
 ];
 
-// Elementy DOM
 const tableBody = document.getElementById('personel-table-body');
 const searchInput = document.querySelector('.search-input');
 const valAll = document.getElementById('val-all');
@@ -79,12 +77,10 @@ function handleSearch(event) {
     renderTable(filtered);
 }
 
-// Podpięcie nasłuchiwania na wpisywanie w wyszukiwarkę
 if (searchInput) {
     searchInput.addEventListener('input', handleSearch);
 }
 
-// Inicjalizacja przy załadowaniu strony
 document.addEventListener('DOMContentLoaded', () => {
     updateMetrics();
     renderTable(employees);

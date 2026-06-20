@@ -1,38 +1,52 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Housekeeping - Overview</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { 
-            background-color: #05080d; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            height: 100dvh; 
-            margin: 0; 
-            font-family: 'Inter', sans-serif; 
+        body {
+            background-color: #05080d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100dvh;
+            margin: 0;
+            font-family: 'Inter', sans-serif;
         }
-        .app-container { 
-            width: 440px; 
-            height: 956px; 
-            background-color: #111827; 
-            position: relative; 
-            overflow: hidden; 
-            display: flex; 
-            flex-direction: column; 
+
+        .app-container {
+            width: 440px;
+            height: 956px;
+            background-color: #111827;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
             border-radius: 45px;
-            box-shadow: 0 0 0 10px #0a0f18, 0 30px 60px rgba(0,0,0,0.5);
+            box-shadow: 0 0 0 10px #0a0f18, 0 30px 60px rgba(0, 0, 0, 0.5);
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
-        .hide-scrollbar::-webkit-scrollbar { display: none; }
-        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        .font-serif-custom { font-family: 'Cormorant Garamond', serif; }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .font-serif-custom {
+            font-family: 'Cormorant Garamond', serif;
+        }
 
         /* Widok mobilny - wypełnia cały ekran urządzenia */
         @media (max-width: 1024px) {
@@ -43,6 +57,7 @@
                 height: 100dvh;
                 overflow: hidden;
             }
+
             .app-container {
                 width: 100vw;
                 height: 100dvh;
@@ -53,9 +68,10 @@
         }
     </style>
 </head>
+
 <body>
     <div class="app-container">
-        
+
         <!-- notchj -->
         <div class="w-full flex justify-center pt-[15px] shrink-0">
             <div class="w-[124px] h-[36px] bg-[#000000] rounded-[20px]"></div>
@@ -63,26 +79,37 @@
 
         <!-- scrollable kontent -->
         <div class="flex-1 overflow-y-auto hide-scrollbar pb-[100px]">
-            
+
             <!-- header -->
             <div class="px-[16px] pt-[9px] flex flex-col gap-[8px]">
                 <div class="h-[36px] flex items-center">
-                    <h1 class="font-serif-custom font-semibold text-[28px] text-[#F2EADF] leading-[32px] m-0">Housekeeping</h1>
+                    <h1 class="font-serif-custom font-semibold text-[28px] text-[#F2EADF] leading-[32px] m-0">
+                        Housekeeping</h1>
                 </div>
 
                 <div class="flex justify-between items-center h-[34px] w-full">
                     <div class="flex items-center gap-[5px]">
-                        <button class="w-[26px] h-[26px] bg-[#1A2334] border border-[#e8e0d41c] rounded-[7px] flex items-center justify-center">
-                            <svg width="6" height="10" viewBox="0 0 5 8" fill="none"><path d="M4.083 7.042L0.833 3.792L4.083 0.542" stroke="#C8C0B4" stroke-width="1.08" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <button
+                            class="w-[26px] h-[26px] bg-[#1A2334] border border-[#e8e0d41c] rounded-[7px] flex items-center justify-center">
+                            <svg width="6" height="10" viewBox="0 0 5 8" fill="none">
+                                <path d="M4.083 7.042L0.833 3.792L4.083 0.542" stroke="#C8C0B4" stroke-width="1.08"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
                         </button>
-                        <div class="h-[34px] bg-[#d9b26b14] border border-[#d9b26b3d] rounded-[8px] px-[14px] flex items-center">
+                        <div
+                            class="h-[34px] bg-[#d9b26b14] border border-[#d9b26b3d] rounded-[8px] px-[14px] flex items-center">
                             <span class="font-bold text-[14px] text-[#D9B26B] tracking-[0.1px]">Piętro 2</span>
                         </div>
-                        <button class="w-[26px] h-[26px] bg-[#1A2334] border border-[#e8e0d41c] rounded-[7px] flex items-center justify-center">
-                            <svg width="6" height="10" viewBox="0 0 5 8" fill="none"><path d="M0.542 7.042L3.792 3.792L0.542 0.542" stroke="#C8C0B4" stroke-width="1.08" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <button
+                            class="w-[26px] h-[26px] bg-[#1A2334] border border-[#e8e0d41c] rounded-[7px] flex items-center justify-center">
+                            <svg width="6" height="10" viewBox="0 0 5 8" fill="none">
+                                <path d="M0.542 7.042L3.792 3.792L0.542 0.542" stroke="#C8C0B4" stroke-width="1.08"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
                         </button>
                     </div>
-                    <div class="h-[33px] bg-[#1A2334] border border-[#e8e0d41c] rounded-[8px] px-[11px] flex items-center gap-[4px]">
+                    <div
+                        class="h-[33px] bg-[#1A2334] border border-[#e8e0d41c] rounded-[8px] px-[11px] flex items-center gap-[4px]">
                         <span class="font-bold text-[14px] text-[#E8E0D4]">8</span>
                         <span class="font-normal text-[12px] text-[#7A8694]">zadań</span>
                     </div>
@@ -91,25 +118,43 @@
 
             <!-- filtry -->
             <div class="px-[16px] flex items-center gap-[7px] mt-[12px] h-[30px]">
-                <button class="h-[30px] px-[11px] bg-[#1A2334] border border-[#e8e0d41f] rounded-[8px] flex items-center justify-center">
+                <button
+                    class="h-[30px] px-[11px] bg-[#1A2334] border border-[#e8e0d41f] rounded-[8px] flex items-center justify-center">
                     <span class="font-medium text-[12px] text-[#A8A09A]">Priorytet</span>
                 </button>
-                <button class="h-[30px] px-[11px] bg-[#1A2334] border border-[#e8e0d41f] rounded-[8px] flex items-center justify-center">
+                <button
+                    class="h-[30px] px-[11px] bg-[#1A2334] border border-[#e8e0d41f] rounded-[8px] flex items-center justify-center">
                     <span class="font-medium text-[12px] text-[#A8A09A]">Typ zadania</span>
                 </button>
             </div>
 
             <!-- legenda -->
-            <div class="w-[calc(100%-32px)] h-[32px] mx-[16px] mt-[11px] bg-[#14202E] border border-[#e8e0d414] rounded-[9px] flex items-center justify-center gap-[8px] px-[16px]">
-                <div class="flex items-center gap-[4px]"><div class="w-[6px] h-[6px] bg-[#E05C5C] rounded-full shadow-[0_0_4px_#e05c5c]"></div><span class="font-medium text-[11px] text-[#9BA3AC]">Pilne</span></div>
+            <div
+                class="w-[calc(100%-32px)] h-[32px] mx-[16px] mt-[11px] bg-[#14202E] border border-[#e8e0d414] rounded-[9px] flex items-center justify-center gap-[8px] px-[16px]">
+                <div class="flex items-center gap-[4px]">
+                    <div class="w-[6px] h-[6px] bg-[#E05C5C] rounded-full shadow-[0_0_4px_#e05c5c]"></div><span
+                        class="font-medium text-[11px] text-[#9BA3AC]">Pilne</span>
+                </div>
                 <div class="w-[1px] h-[9px] bg-[#e8e0d41c]"></div>
-                <div class="flex items-center gap-[4px]"><div class="w-[6px] h-[6px] bg-[#6FAECC] rounded-full"></div><span class="font-medium text-[11px] text-[#9BA3AC]">W trakcie</span></div>
+                <div class="flex items-center gap-[4px]">
+                    <div class="w-[6px] h-[6px] bg-[#6FAECC] rounded-full"></div><span
+                        class="font-medium text-[11px] text-[#9BA3AC]">W trakcie</span>
+                </div>
                 <div class="w-[1px] h-[9px] bg-[#e8e0d41c]"></div>
-                <div class="flex items-center gap-[4px]"><div class="w-[6px] h-[6px] bg-[#4CAF7D] rounded-full"></div><span class="font-medium text-[11px] text-[#9BA3AC]">Wykonane</span></div>
+                <div class="flex items-center gap-[4px]">
+                    <div class="w-[6px] h-[6px] bg-[#4CAF7D] rounded-full"></div><span
+                        class="font-medium text-[11px] text-[#9BA3AC]">Wykonane</span>
+                </div>
                 <div class="w-[1px] h-[9px] bg-[#e8e0d41c]"></div>
-                <div class="flex items-center gap-[4px]"><div class="w-[6px] h-[6px] bg-[#D9B26B] rounded-full"></div><span class="font-medium text-[11px] text-[#9BA3AC]">Nowe</span></div>
+                <div class="flex items-center gap-[4px]">
+                    <div class="w-[6px] h-[6px] bg-[#D9B26B] rounded-full"></div><span
+                        class="font-medium text-[11px] text-[#9BA3AC]">Nowe</span>
+                </div>
                 <div class="w-[1px] h-[9px] bg-[#e8e0d41c]"></div>
-                <div class="flex items-center gap-[4px]"><div class="w-[6px] h-[6px] bg-[#4E5A66] rounded-full"></div><span class="font-medium text-[11px] text-[#9BA3AC] leading-none mt-0.5">Brak zgłoszeń</span></div>
+                <div class="flex items-center gap-[4px]">
+                    <div class="w-[6px] h-[6px] bg-[#4E5A66] rounded-full"></div><span
+                        class="font-medium text-[11px] text-[#9BA3AC] leading-none mt-0.5">Brak zgłoszeń</span>
+                </div>
             </div>
 
             <!-- list title -->
@@ -120,175 +165,290 @@
 
             <!-- lista pokojow -->
             <div class="flex flex-col gap-[7px] px-[16px]">
-                
+
                 <!-- 201 -pilne + odnosnik do strony kolejnej (index2) -->
-                <a href="index2.html" class="block relative w-full h-[68px] bg-[#172032] rounded-[11px] border border-[#e8e0d417] overflow-hidden cursor-pointer">
-                    <div class="absolute left-0 top-[8px] w-[3px] h-[52px] bg-[#E05C5C] rounded-r-[2px] shadow-[0_0_6px_#e05c5c55]"></div>
+                <a href="index2.html"
+                    class="block relative w-full h-[68px] bg-[#172032] rounded-[11px] border border-[#e8e0d417] overflow-hidden cursor-pointer">
+                    <div
+                        class="absolute left-0 top-[8px] w-[3px] h-[52px] bg-[#E05C5C] rounded-r-[2px] shadow-[0_0_6px_#e05c5c55]">
+                    </div>
                     <div class="absolute left-[18px] top-[14px] flex flex-col gap-[3px]">
                         <div class="flex items-center gap-[7px]">
-                            <span class="font-bold text-[18px] text-[#D4CDC5] tracking-[-0.3px] leading-[22px]">201</span>
+                            <span
+                                class="font-bold text-[18px] text-[#D4CDC5] tracking-[-0.3px] leading-[22px]">201</span>
                             <div class="w-[5px] h-[5px] bg-[#E05C5C] rounded-full shadow-[0_0_4px_#e05c5c]"></div>
                         </div>
                         <div class="flex items-center gap-[5px]">
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M11 3.5H10M3.25 1.5H8.75C9.08 1.5 9.4 1.63 9.63 1.86C9.86 2.1 10 2.41 10 2.75V10C10 10.13 9.94 10.25 9.85 10.35C9.75 10.44 9.63 10.5 9.5 10.5H5C4.86 10.5 4.74 10.44 4.64 10.35C4.55 10.25 4.5 10.13 4.5 10V2.75C4.5 2.41 4.36 2.1 4.13 1.86C3.89 1.63 3.58 1.5 3.25 1.5ZM3.25 1.5C2.91 1.5 2.6 1.63 2.36 1.86C2.13 2.1 2 2.41 2 2.75V8.5C2 8.63 2.05 8.75 2.14 8.85C2.24 8.94 2.36 9 2.5 9H4.5M4.5 3.5H1" stroke="#7A8694" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                <path
+                                    d="M11 3.5H10M3.25 1.5H8.75C9.08 1.5 9.4 1.63 9.63 1.86C9.86 2.1 10 2.41 10 2.75V10C10 10.13 9.94 10.25 9.85 10.35C9.75 10.44 9.63 10.5 9.5 10.5H5C4.86 10.5 4.74 10.44 4.64 10.35C4.55 10.25 4.5 10.13 4.5 10V2.75C4.5 2.41 4.36 2.1 4.13 1.86C3.89 1.63 3.58 1.5 3.25 1.5ZM3.25 1.5C2.91 1.5 2.6 1.63 2.36 1.86C2.13 2.1 2 2.41 2 2.75V8.5C2 8.63 2.05 8.75 2.14 8.85C2.24 8.94 2.36 9 2.5 9H4.5M4.5 3.5H1"
+                                    stroke="#7A8694" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
                             <span class="font-normal text-[12px] text-[#7A8694] leading-[15px]">Ręczniki</span>
                         </div>
                     </div>
                     <div class="absolute right-[14px] top-[21px] flex items-center gap-[12px]">
-                        <div class="h-[26px] px-[9px] bg-[#e05c5c1a] border border-[#e05c5c52] rounded-[7px] flex items-center gap-[5px]">
+                        <div
+                            class="h-[26px] px-[9px] bg-[#e05c5c1a] border border-[#e05c5c52] rounded-[7px] flex items-center gap-[5px]">
                             <div class="w-[5px] h-[5px] bg-[#E05C5C] rounded-full"></div>
                             <span class="font-semibold text-[11px] text-[#E05C5C] tracking-[0.3px]">PILNE</span>
                         </div>
-                        <svg width="6" height="10" viewBox="0 0 5 9" fill="none"><path d="M0.583 7.583L4.083 4.083L0.583 0.583" stroke="#5A6878" stroke-opacity="0.7" stroke-width="1.16" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <svg width="6" height="10" viewBox="0 0 5 9" fill="none">
+                            <path d="M0.583 7.583L4.083 4.083L0.583 0.583" stroke="#5A6878" stroke-opacity="0.7"
+                                stroke-width="1.16" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
                     </div>
                 </a>
 
                 <!-- 202 -->
-                <div class="relative w-full h-[68px] bg-[#131D2C] rounded-[11px] border border-[#4caf7d29] overflow-hidden">
-                    <div class="absolute left-0 top-[8px] w-[3px] h-[52px] bg-[#4CAF7D] opacity-70 rounded-r-[2px]"></div>
+                <div
+                    class="relative w-full h-[68px] bg-[#131D2C] rounded-[11px] border border-[#4caf7d29] overflow-hidden">
+                    <div class="absolute left-0 top-[8px] w-[3px] h-[52px] bg-[#4CAF7D] opacity-70 rounded-r-[2px]">
+                    </div>
                     <div class="absolute left-[18px] top-[14px] flex flex-col gap-[3px]">
                         <div class="flex items-center gap-[7px]">
-                            <span class="font-bold text-[18px] text-[#d4cdc559] tracking-[-0.3px] leading-[22px]">202</span>
+                            <span
+                                class="font-bold text-[18px] text-[#d4cdc559] tracking-[-0.3px] leading-[22px]">202</span>
                         </div>
                         <div class="flex items-center gap-[5px]">
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" class="opacity-40"><path d="M6.4 9.8C6.52 9.89 6.67 9.95 6.83 9.98C6.98 10.01 7.14 10 7.29 9.95C7.44 9.9 7.58 9.82 7.7 9.71C7.81 9.6 7.89 9.46 7.94 9.31C7.99 9.16 8.01 9 7.98 8.84C7.96 8.69 7.9 8.54 7.81 8.41C7.71 8.28 7.59 8.18 7.45 8.1C7.31 8.03 7.15 8 7 8H1" stroke="#7A8694" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.75 4C8.87 3.82 9.04 3.69 9.24 3.6C9.43 3.52 9.65 3.48 9.86 3.5C10.07 3.52 10.27 3.59 10.45 3.71C10.63 3.83 10.77 4 10.86 4.19C10.96 4.38 11 4.59 10.99 4.8C10.98 5.01 10.92 5.22 10.81 5.4C10.7 5.58 10.54 5.73 10.35 5.84C10.17 5.94 9.96 6 9.75 6H1" stroke="#7A8694" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.9 2.2C5.02 2.1 5.17 2.04 5.33 2.01C5.48 1.98 5.64 1.99 5.79 2.04C5.94 2.09 6.08 2.17 6.2 2.28C6.31 2.39 6.39 2.53 6.44 2.68C6.49 2.83 6.51 2.99 6.48 3.15C6.46 3.3 6.4 3.45 6.31 3.58C6.21 3.71 6.09 3.81 5.95 3.89C5.81 3.96 5.65 4 5.5 4H1" stroke="#7A8694" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" class="opacity-40">
+                                <path
+                                    d="M6.4 9.8C6.52 9.89 6.67 9.95 6.83 9.98C6.98 10.01 7.14 10 7.29 9.95C7.44 9.9 7.58 9.82 7.7 9.71C7.81 9.6 7.89 9.46 7.94 9.31C7.99 9.16 8.01 9 7.98 8.84C7.96 8.69 7.9 8.54 7.81 8.41C7.71 8.28 7.59 8.18 7.45 8.1C7.31 8.03 7.15 8 7 8H1"
+                                    stroke="#7A8694" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M8.75 4C8.87 3.82 9.04 3.69 9.24 3.6C9.43 3.52 9.65 3.48 9.86 3.5C10.07 3.52 10.27 3.59 10.45 3.71C10.63 3.83 10.77 4 10.86 4.19C10.96 4.38 11 4.59 10.99 4.8C10.98 5.01 10.92 5.22 10.81 5.4C10.7 5.58 10.54 5.73 10.35 5.84C10.17 5.94 9.96 6 9.75 6H1"
+                                    stroke="#7A8694" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M4.9 2.2C5.02 2.1 5.17 2.04 5.33 2.01C5.48 1.98 5.64 1.99 5.79 2.04C5.94 2.09 6.08 2.17 6.2 2.28C6.31 2.39 6.39 2.53 6.44 2.68C6.49 2.83 6.51 2.99 6.48 3.15C6.46 3.3 6.4 3.45 6.31 3.58C6.21 3.71 6.09 3.81 5.95 3.89C5.81 3.96 5.65 4 5.5 4H1"
+                                    stroke="#7A8694" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
                             <span class="font-normal text-[12px] text-[#7a869461] leading-[15px]">Odkurzanie</span>
                         </div>
                     </div>
                     <div class="absolute right-[14px] top-[21px] flex items-center gap-[12px]">
-                        <div class="h-[26px] px-[9px] bg-[#4caf7d17] border border-[#4caf7d47] rounded-[7px] flex items-center gap-[5px]">
+                        <div
+                            class="h-[26px] px-[9px] bg-[#4caf7d17] border border-[#4caf7d47] rounded-[7px] flex items-center gap-[5px]">
                             <div class="w-[5px] h-[5px] bg-[#4CAF7D] rounded-full"></div>
                             <span class="font-semibold text-[11px] text-[#4CAF7D] tracking-[0.3px]">WYKONANE</span>
                         </div>
-                        <svg width="6" height="10" viewBox="0 0 5 9" fill="none"><path d="M0.583 7.583L4.083 4.083L0.583 0.583" stroke="#5A6878" stroke-opacity="0.7" stroke-width="1.16" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <svg width="6" height="10" viewBox="0 0 5 9" fill="none">
+                            <path d="M0.583 7.583L4.083 4.083L0.583 0.583" stroke="#5A6878" stroke-opacity="0.7"
+                                stroke-width="1.16" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
                     </div>
                 </div>
 
                 <!-- 203 -->
-                <div class="relative w-full h-[68px] bg-[#172032] rounded-[11px] border border-[#e8e0d417] overflow-hidden">
+                <div
+                    class="relative w-full h-[68px] bg-[#172032] rounded-[11px] border border-[#e8e0d417] overflow-hidden">
                     <div class="absolute left-0 top-[8px] w-[3px] h-[52px] bg-[#6FAECC] rounded-r-[2px]"></div>
                     <div class="absolute left-[18px] top-[14px] flex flex-col gap-[3px]">
                         <div class="flex items-center gap-[7px]">
-                            <span class="font-bold text-[18px] text-[#D4CDC5] tracking-[-0.3px] leading-[22px]">203</span>
+                            <span
+                                class="font-bold text-[18px] text-[#D4CDC5] tracking-[-0.3px] leading-[22px]">203</span>
                         </div>
                         <div class="flex items-center gap-[5px]">
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4.968 7.75C4.923 7.576 4.833 7.419 4.707 7.292C4.58 7.166 4.423 7.076 4.25 7.031L1.182 6.24C1.13 6.225 1.084 6.194 1.051 6.15C1.018 6.107 1 6.054 1 6C1 5.945 1.018 5.892 1.051 5.849C1.084 5.805 1.13 5.774 1.182 5.759L4.25 4.968C4.422 4.923 4.58 4.833 4.707 4.707C4.833 4.58 4.923 4.422 4.968 4.25L5.759 1.182C5.774 1.129 5.805 1.083 5.849 1.05C5.892 1.017 5.945 1 6 1C6.054 1 6.107 1.017 6.151 1.05C6.194 1.083 6.226 1.129 6.241 1.182L7.031 4.25C7.076 4.423 7.166 4.58 7.292 4.707C7.419 4.833 7.576 4.923 7.75 4.968L10.817 5.759C10.87 5.773 10.916 5.805 10.949 5.848C10.983 5.892 11 5.945 11 6C11 6.054 10.983 6.107 10.949 6.151C10.916 6.195 10.87 6.226 10.817 6.241L7.75 7.031C7.576 7.076 7.419 7.166 7.292 7.292C7.166 7.419 7.076 7.576 7.031 7.75L6.24 10.817C6.225 10.87 6.194 10.916 6.15 10.949C6.107 10.982 6.054 11 5.999 11C5.945 11 5.892 10.982 5.848 10.949C5.805 10.916 5.773 10.87 5.759 10.817L4.968 7.75Z" stroke="#5A6878" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                <path
+                                    d="M4.968 7.75C4.923 7.576 4.833 7.419 4.707 7.292C4.58 7.166 4.423 7.076 4.25 7.031L1.182 6.24C1.13 6.225 1.084 6.194 1.051 6.15C1.018 6.107 1 6.054 1 6C1 5.945 1.018 5.892 1.051 5.849C1.084 5.805 1.13 5.774 1.182 5.759L4.25 4.968C4.422 4.923 4.58 4.833 4.707 4.707C4.833 4.58 4.923 4.422 4.968 4.25L5.759 1.182C5.774 1.129 5.805 1.083 5.849 1.05C5.892 1.017 5.945 1 6 1C6.054 1 6.107 1.017 6.151 1.05C6.194 1.083 6.226 1.129 6.241 1.182L7.031 4.25C7.076 4.423 7.166 4.58 7.292 4.707C7.419 4.833 7.576 4.923 7.75 4.968L10.817 5.759C10.87 5.773 10.916 5.805 10.949 5.848C10.983 5.892 11 5.945 11 6C11 6.054 10.983 6.107 10.949 6.151C10.916 6.195 10.87 6.226 10.817 6.241L7.75 7.031C7.576 7.076 7.419 7.166 7.292 7.292C7.166 7.419 7.076 7.576 7.031 7.75L6.24 10.817C6.225 10.87 6.194 10.916 6.15 10.949C6.107 10.982 6.054 11 5.999 11C5.945 11 5.892 10.982 5.848 10.949C5.805 10.916 5.773 10.87 5.759 10.817L4.968 7.75Z"
+                                    stroke="#5A6878" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
                             <span class="font-normal text-[12px] text-[#7A8694] leading-[15px]">Sprzątanie</span>
                         </div>
                     </div>
                     <div class="absolute right-[14px] top-[21px] flex items-center gap-[12px]">
-                        <div class="h-[26px] px-[9px] bg-[#6faecc1a] border border-[#6faecc4c] rounded-[7px] flex items-center gap-[5px]">
+                        <div
+                            class="h-[26px] px-[9px] bg-[#6faecc1a] border border-[#6faecc4c] rounded-[7px] flex items-center gap-[5px]">
                             <div class="w-[5px] h-[5px] bg-[#6FAECC] rounded-full"></div>
                             <span class="font-semibold text-[11px] text-[#6FAECC] tracking-[0.3px]">W TRAKCIE</span>
                         </div>
-                        <svg width="6" height="10" viewBox="0 0 5 9" fill="none"><path d="M0.583 7.583L4.083 4.083L0.583 0.583" stroke="#5A6878" stroke-opacity="0.7" stroke-width="1.16" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <svg width="6" height="10" viewBox="0 0 5 9" fill="none">
+                            <path d="M0.583 7.583L4.083 4.083L0.583 0.583" stroke="#5A6878" stroke-opacity="0.7"
+                                stroke-width="1.16" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
                     </div>
                 </div>
 
                 <!-- 204 -->
-                <div class="relative w-full h-[68px] bg-[#172032] rounded-[11px] border border-[#e8e0d417] overflow-hidden">
+                <div
+                    class="relative w-full h-[68px] bg-[#172032] rounded-[11px] border border-[#e8e0d417] overflow-hidden">
                     <div class="absolute left-0 top-[8px] w-[3px] h-[52px] bg-[#6FAECC] rounded-r-[2px]"></div>
                     <div class="absolute left-[18px] top-[14px] flex flex-col gap-[3px]">
                         <div class="flex items-center gap-[7px]">
-                            <span class="font-bold text-[18px] text-[#D4CDC5] tracking-[-0.3px] leading-[22px]">204</span>
+                            <span
+                                class="font-bold text-[18px] text-[#D4CDC5] tracking-[-0.3px] leading-[22px]">204</span>
                         </div>
                         <div class="flex items-center gap-[5px]">
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 11C8.761 11 11 8.761 11 6C11 3.238 8.761 1 6 1C3.238 1 1 3.238 1 6C1 8.761 3.238 11 6 11Z" stroke="#5A6878" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 3V6L8 7" stroke="#5A6878" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                <path
+                                    d="M6 11C8.761 11 11 8.761 11 6C11 3.238 8.761 1 6 1C3.238 1 1 3.238 1 6C1 8.761 3.238 11 6 11Z"
+                                    stroke="#5A6878" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M6 3V6L8 7" stroke="#5A6878" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
                             <span class="font-normal text-[12px] text-[#7A8694] leading-[15px]">Obsługa</span>
                         </div>
                     </div>
                     <div class="absolute right-[14px] top-[21px] flex items-center gap-[12px]">
-                        <div class="h-[26px] px-[9px] bg-[#6faecc1a] border border-[#6faecc4c] rounded-[7px] flex items-center gap-[5px]">
+                        <div
+                            class="h-[26px] px-[9px] bg-[#6faecc1a] border border-[#6faecc4c] rounded-[7px] flex items-center gap-[5px]">
                             <div class="w-[5px] h-[5px] bg-[#6FAECC] rounded-full"></div>
                             <span class="font-semibold text-[11px] text-[#6FAECC] tracking-[0.3px]">W TRAKCIE</span>
                         </div>
-                        <svg width="6" height="10" viewBox="0 0 5 9" fill="none"><path d="M0.583 7.583L4.083 4.083L0.583 0.583" stroke="#5A6878" stroke-opacity="0.7" stroke-width="1.16" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <svg width="6" height="10" viewBox="0 0 5 9" fill="none">
+                            <path d="M0.583 7.583L4.083 4.083L0.583 0.583" stroke="#5A6878" stroke-opacity="0.7"
+                                stroke-width="1.16" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
                     </div>
                 </div>
 
                 <!-- 205 -->
-                <div class="relative w-full h-[68px] bg-[#172032] rounded-[11px] border border-[#e8e0d417] overflow-hidden">
-                    <div class="absolute left-0 top-[8px] w-[3px] h-[52px] bg-[#E05C5C] rounded-r-[2px] shadow-[0_0_6px_#e05c5c55]"></div>
+                <div
+                    class="relative w-full h-[68px] bg-[#172032] rounded-[11px] border border-[#e8e0d417] overflow-hidden">
+                    <div
+                        class="absolute left-0 top-[8px] w-[3px] h-[52px] bg-[#E05C5C] rounded-r-[2px] shadow-[0_0_6px_#e05c5c55]">
+                    </div>
                     <div class="absolute left-[18px] top-[14px] flex flex-col gap-[3px]">
                         <div class="flex items-center gap-[7px]">
-                            <span class="font-bold text-[18px] text-[#D4CDC5] tracking-[-0.3px] leading-[22px]">205</span>
+                            <span
+                                class="font-bold text-[18px] text-[#D4CDC5] tracking-[-0.3px] leading-[22px]">205</span>
                             <div class="w-[5px] h-[5px] bg-[#E05C5C] rounded-full shadow-[0_0_4px_#e05c5c]"></div>
                         </div>
                         <div class="flex items-center gap-[5px]">
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 10V6C1 5.734 1.105 5.48 1.292 5.292C1.48 5.105 1.734 5 2 5H10C10.265 5 10.519 5.105 10.707 5.292C10.894 5.48 11 5.734 11 6V10" stroke="#7A8694" stroke-opacity="0.35" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 5V3C2 2.734 2.105 2.48 2.292 2.292C2.48 2.105 2.734 2 3 2H9C9.265 2 9.519 2.105 9.707 2.292C9.894 2.48 10 2.734 10 3V5" stroke="#7A8694" stroke-opacity="0.35" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 2V5" stroke="#7A8694" stroke-opacity="0.35" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 9H11" stroke="#7A8694" stroke-opacity="0.35" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                <path
+                                    d="M1 10V6C1 5.734 1.105 5.48 1.292 5.292C1.48 5.105 1.734 5 2 5H10C10.265 5 10.519 5.105 10.707 5.292C10.894 5.48 11 5.734 11 6V10"
+                                    stroke="#7A8694" stroke-opacity="0.35" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M2 5V3C2 2.734 2.105 2.48 2.292 2.292C2.48 2.105 2.734 2 3 2H9C9.265 2 9.519 2.105 9.707 2.292C9.894 2.48 10 2.734 10 3V5"
+                                    stroke="#7A8694" stroke-opacity="0.35" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M6 2V5" stroke="#7A8694" stroke-opacity="0.35" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M1 9H11" stroke="#7A8694" stroke-opacity="0.35" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
                             <span class="font-normal text-[12px] text-[#7A8694] leading-[15px]">Minibar</span>
                         </div>
                     </div>
                     <div class="absolute right-[14px] top-[21px] flex items-center gap-[12px]">
-                        <div class="h-[26px] px-[9px] bg-[#e05c5c1a] border border-[#e05c5c52] rounded-[7px] flex items-center gap-[5px]">
+                        <div
+                            class="h-[26px] px-[9px] bg-[#e05c5c1a] border border-[#e05c5c52] rounded-[7px] flex items-center gap-[5px]">
                             <div class="w-[5px] h-[5px] bg-[#E05C5C] rounded-full"></div>
                             <span class="font-semibold text-[11px] text-[#E05C5C] tracking-[0.3px]">PILNE</span>
                         </div>
-                        <svg width="6" height="10" viewBox="0 0 5 9" fill="none"><path d="M0.583 7.583L4.083 4.083L0.583 0.583" stroke="#5A6878" stroke-opacity="0.7" stroke-width="1.16" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <svg width="6" height="10" viewBox="0 0 5 9" fill="none">
+                            <path d="M0.583 7.583L4.083 4.083L0.583 0.583" stroke="#5A6878" stroke-opacity="0.7"
+                                stroke-width="1.16" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
                     </div>
                 </div>
 
                 <!-- 206 -->
-                <div class="relative w-full h-[68px] bg-[#172032] rounded-[11px] border border-[#e8e0d417] overflow-hidden">
-                    <div class="absolute left-0 top-[8px] w-[3px] h-[52px] bg-[#E05C5C] rounded-r-[2px] shadow-[0_0_6px_#e05c5c55]"></div>
+                <div
+                    class="relative w-full h-[68px] bg-[#172032] rounded-[11px] border border-[#e8e0d417] overflow-hidden">
+                    <div
+                        class="absolute left-0 top-[8px] w-[3px] h-[52px] bg-[#E05C5C] rounded-r-[2px] shadow-[0_0_6px_#e05c5c55]">
+                    </div>
                     <div class="absolute left-[18px] top-[14px] flex flex-col gap-[3px]">
                         <div class="flex items-center gap-[7px]">
-                            <span class="font-bold text-[18px] text-[#D4CDC5] tracking-[-0.3px] leading-[22px]">206</span>
+                            <span
+                                class="font-bold text-[18px] text-[#D4CDC5] tracking-[-0.3px] leading-[22px]">206</span>
                             <div class="w-[5px] h-[5px] bg-[#E05C5C] rounded-full shadow-[0_0_4px_#e05c5c]"></div>
                         </div>
                         <div class="flex items-center gap-[5px]">
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4.968 7.75C4.923 7.576 4.833 7.419 4.707 7.292C4.58 7.166 4.423 7.076 4.25 7.031L1.182 6.24C1.13 6.225 1.084 6.194 1.051 6.15C1.018 6.107 1 6.054 1 6C1 5.945 1.018 5.892 1.051 5.849C1.084 5.805 1.13 5.774 1.182 5.759L4.25 4.968C4.422 4.923 4.58 4.833 4.707 4.707C4.833 4.58 4.923 4.422 4.968 4.25L5.759 1.182C5.774 1.129 5.805 1.083 5.849 1.05C5.892 1.017 5.945 1 6 1C6.054 1 6.107 1.017 6.151 1.05C6.194 1.083 6.226 1.129 6.241 1.182L7.031 4.25C7.076 4.423 7.166 4.58 7.292 4.707C7.419 4.833 7.576 4.923 7.75 4.968L10.817 5.759C10.87 5.773 10.916 5.805 10.949 5.848C10.983 5.892 11 5.945 11 6C11 6.054 10.983 6.107 10.949 6.151C10.916 6.195 10.87 6.226 10.817 6.241L7.75 7.031C7.576 7.076 7.419 7.166 7.292 7.292C7.166 7.419 7.076 7.576 7.031 7.75L6.24 10.817C6.225 10.87 6.194 10.916 6.15 10.949C6.107 10.982 6.054 11 5.999 11C5.945 11 5.892 10.982 5.848 10.949C5.805 10.916 5.773 10.87 5.759 10.817L4.968 7.75Z" stroke="#5A6878" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 1.5V3.5" stroke="#5A6878" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 2.5H9" stroke="#5A6878" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 8.5V9.5" stroke="#5A6878" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.5 9H1.5" stroke="#5A6878" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                <path
+                                    d="M4.968 7.75C4.923 7.576 4.833 7.419 4.707 7.292C4.58 7.166 4.423 7.076 4.25 7.031L1.182 6.24C1.13 6.225 1.084 6.194 1.051 6.15C1.018 6.107 1 6.054 1 6C1 5.945 1.018 5.892 1.051 5.849C1.084 5.805 1.13 5.774 1.182 5.759L4.25 4.968C4.422 4.923 4.58 4.833 4.707 4.707C4.833 4.58 4.923 4.422 4.968 4.25L5.759 1.182C5.774 1.129 5.805 1.083 5.849 1.05C5.892 1.017 5.945 1 6 1C6.054 1 6.107 1.017 6.151 1.05C6.194 1.083 6.226 1.129 6.241 1.182L7.031 4.25C7.076 4.423 7.166 4.58 7.292 4.707C7.419 4.833 7.576 4.923 7.75 4.968L10.817 5.759C10.87 5.773 10.916 5.805 10.949 5.848C10.983 5.892 11 5.945 11 6C11 6.054 10.983 6.107 10.949 6.151C10.916 6.195 10.87 6.226 10.817 6.241L7.75 7.031C7.576 7.076 7.419 7.166 7.292 7.292C7.166 7.419 7.076 7.576 7.031 7.75L6.24 10.817C6.225 10.87 6.194 10.916 6.15 10.949C6.107 10.982 6.054 11 5.999 11C5.945 11 5.892 10.982 5.848 10.949C5.805 10.916 5.773 10.87 5.759 10.817L4.968 7.75Z"
+                                    stroke="#5A6878" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M10 1.5V3.5" stroke="#5A6878" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M11 2.5H9" stroke="#5A6878" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M2 8.5V9.5" stroke="#5A6878" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M2.5 9H1.5" stroke="#5A6878" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
                             <span class="font-normal text-[12px] text-[#7A8694] leading-[15px]">Łazienka</span>
                         </div>
                     </div>
                     <div class="absolute right-[14px] top-[21px] flex items-center gap-[12px]">
-                        <div class="h-[26px] px-[9px] bg-[#e05c5c1a] border border-[#e05c5c52] rounded-[7px] flex items-center gap-[5px]">
+                        <div
+                            class="h-[26px] px-[9px] bg-[#e05c5c1a] border border-[#e05c5c52] rounded-[7px] flex items-center gap-[5px]">
                             <div class="w-[5px] h-[5px] bg-[#E05C5C] rounded-full"></div>
                             <span class="font-semibold text-[11px] text-[#E05C5C] tracking-[0.3px]">PILNE</span>
                         </div>
-                        <svg width="6" height="10" viewBox="0 0 5 9" fill="none"><path d="M0.583 7.583L4.083 4.083L0.583 0.583" stroke="#5A6878" stroke-opacity="0.7" stroke-width="1.16" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <svg width="6" height="10" viewBox="0 0 5 9" fill="none">
+                            <path d="M0.583 7.583L4.083 4.083L0.583 0.583" stroke="#5A6878" stroke-opacity="0.7"
+                                stroke-width="1.16" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
                     </div>
                 </div>
 
                 <!-- 207 -->
-                <div class="relative w-full h-[68px] bg-[#131D2C] rounded-[11px] border border-[#4caf7d29] overflow-hidden">
-                    <div class="absolute left-0 top-[8px] w-[3px] h-[52px] bg-[#4CAF7D] opacity-70 rounded-r-[2px]"></div>
+                <div
+                    class="relative w-full h-[68px] bg-[#131D2C] rounded-[11px] border border-[#4caf7d29] overflow-hidden">
+                    <div class="absolute left-0 top-[8px] w-[3px] h-[52px] bg-[#4CAF7D] opacity-70 rounded-r-[2px]">
+                    </div>
                     <div class="absolute left-[18px] top-[14px] flex flex-col gap-[3px]">
                         <div class="flex items-center gap-[7px]">
-                            <span class="font-bold text-[18px] text-[#d4cdc559] tracking-[-0.3px] leading-[22px]">207</span>
+                            <span
+                                class="font-bold text-[18px] text-[#d4cdc559] tracking-[-0.3px] leading-[22px]">207</span>
                         </div>
                         <div class="flex items-center gap-[5px]">
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" class="opacity-40"><path d="M2.558 2.052C2.551 1.982 2.558 1.912 2.58 1.845C2.601 1.779 2.637 1.717 2.684 1.665C2.731 1.613 2.788 1.572 2.852 1.543C2.916 1.515 2.985 1.5 3.055 1.5H8.945C9.015 1.5 9.084 1.515 9.148 1.543C9.212 1.572 9.27 1.614 9.317 1.666C9.363 1.718 9.399 1.779 9.42 1.846C9.442 1.912 9.449 1.983 9.442 2.053L8.595 10.105C8.569 10.351 8.453 10.578 8.269 10.744C8.086 10.909 7.847 11 7.6 11H4.4C4.152 11 3.912 10.911 3.728 10.745C3.543 10.58 3.426 10.352 3.4 10.105L2.558 2.052Z" stroke="#7A8694" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 6C3.433 5.675 3.959 5.5 4.5 5.5C5.041 5.5 5.567 5.675 6 6C6.433 6.325 6.959 6.5 7.5 6.5C8.041 6.5 8.567 6.325 9 6" stroke="#7A8694" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" class="opacity-40">
+                                <path
+                                    d="M2.558 2.052C2.551 1.982 2.558 1.912 2.58 1.845C2.601 1.779 2.637 1.717 2.684 1.665C2.731 1.613 2.788 1.572 2.852 1.543C2.916 1.515 2.985 1.5 3.055 1.5H8.945C9.015 1.5 9.084 1.515 9.148 1.543C9.212 1.572 9.27 1.614 9.317 1.666C9.363 1.718 9.399 1.779 9.42 1.846C9.442 1.912 9.449 1.983 9.442 2.053L8.595 10.105C8.569 10.351 8.453 10.578 8.269 10.744C8.086 10.909 7.847 11 7.6 11H4.4C4.152 11 3.912 10.911 3.728 10.745C3.543 10.58 3.426 10.352 3.4 10.105L2.558 2.052Z"
+                                    stroke="#7A8694" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M3 6C3.433 5.675 3.959 5.5 4.5 5.5C5.041 5.5 5.567 5.675 6 6C6.433 6.325 6.959 6.5 7.5 6.5C8.041 6.5 8.567 6.325 9 6"
+                                    stroke="#7A8694" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
                             <span class="font-normal text-[12px] text-[#7a869461] leading-[15px]">Pościel</span>
                         </div>
                     </div>
                     <div class="absolute right-[14px] top-[21px] flex items-center gap-[12px]">
-                        <div class="h-[26px] px-[9px] bg-[#4caf7d17] border border-[#4caf7d47] rounded-[7px] flex items-center gap-[5px]">
+                        <div
+                            class="h-[26px] px-[9px] bg-[#4caf7d17] border border-[#4caf7d47] rounded-[7px] flex items-center gap-[5px]">
                             <div class="w-[5px] h-[5px] bg-[#4CAF7D] rounded-full"></div>
                             <span class="font-semibold text-[11px] text-[#4CAF7D] tracking-[0.3px]">WYKONANE</span>
                         </div>
-                        <svg width="6" height="10" viewBox="0 0 5 9" fill="none"><path d="M0.583 7.583L4.083 4.083L0.583 0.583" stroke="#5A6878" stroke-opacity="0.7" stroke-width="1.16" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <svg width="6" height="10" viewBox="0 0 5 9" fill="none">
+                            <path d="M0.583 7.583L4.083 4.083L0.583 0.583" stroke="#5A6878" stroke-opacity="0.7"
+                                stroke-width="1.16" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
                     </div>
                 </div>
 
                 <!-- 208 -->
-                <div class="relative w-full h-[68px] bg-[#131D2C] rounded-[11px] border border-[#4caf7d29] overflow-hidden">
-                    <div class="absolute left-0 top-[8px] w-[3px] h-[52px] bg-[#4CAF7D] opacity-70 rounded-r-[2px]"></div>
+                <div
+                    class="relative w-full h-[68px] bg-[#131D2C] rounded-[11px] border border-[#4caf7d29] overflow-hidden">
+                    <div class="absolute left-0 top-[8px] w-[3px] h-[52px] bg-[#4CAF7D] opacity-70 rounded-r-[2px]">
+                    </div>
                     <div class="absolute left-[18px] top-[14px] flex flex-col gap-[3px]">
                         <div class="flex items-center gap-[7px]">
-                            <span class="font-bold text-[18px] text-[#d4cdc559] tracking-[-0.3px] leading-[22px]">208</span>
+                            <span
+                                class="font-bold text-[18px] text-[#d4cdc559] tracking-[-0.3px] leading-[22px]">208</span>
                         </div>
                         <div class="flex items-center gap-[5px]">
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" class="opacity-40"><path d="M2.558 2.052C2.551 1.982 2.558 1.912 2.58 1.845C2.601 1.779 2.637 1.717 2.684 1.665C2.731 1.613 2.788 1.572 2.852 1.543C2.916 1.515 2.985 1.5 3.055 1.5H8.945C9.015 1.5 9.084 1.515 9.148 1.543C9.212 1.572 9.27 1.614 9.317 1.666C9.363 1.718 9.399 1.779 9.42 1.846C9.442 1.912 9.449 1.983 9.442 2.053L8.595 10.105C8.569 10.351 8.453 10.578 8.269 10.744C8.086 10.909 7.847 11 7.6 11H4.4C4.152 11 3.912 10.911 3.728 10.745C3.543 10.58 3.426 10.352 3.4 10.105L2.558 2.052Z" stroke="#7A8694" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 6C3.433 5.675 3.959 5.5 4.5 5.5C5.041 5.5 5.567 5.675 6 6C6.433 6.325 6.959 6.5 7.5 6.5C8.041 6.5 8.567 6.325 9 6" stroke="#7A8694" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" class="opacity-40">
+                                <path
+                                    d="M2.558 2.052C2.551 1.982 2.558 1.912 2.58 1.845C2.601 1.779 2.637 1.717 2.684 1.665C2.731 1.613 2.788 1.572 2.852 1.543C2.916 1.515 2.985 1.5 3.055 1.5H8.945C9.015 1.5 9.084 1.515 9.148 1.543C9.212 1.572 9.27 1.614 9.317 1.666C9.363 1.718 9.399 1.779 9.42 1.846C9.442 1.912 9.449 1.983 9.442 2.053L8.595 10.105C8.569 10.351 8.453 10.578 8.269 10.744C8.086 10.909 7.847 11 7.6 11H4.4C4.152 11 3.912 10.911 3.728 10.745C3.543 10.58 3.426 10.352 3.4 10.105L2.558 2.052Z"
+                                    stroke="#7A8694" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M3 6C3.433 5.675 3.959 5.5 4.5 5.5C5.041 5.5 5.567 5.675 6 6C6.433 6.325 6.959 6.5 7.5 6.5C8.041 6.5 8.567 6.325 9 6"
+                                    stroke="#7A8694" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
                             <span class="font-normal text-[12px] text-[#7a869461] leading-[15px]">Pościel</span>
                         </div>
                     </div>
                     <div class="absolute right-[14px] top-[21px] flex items-center gap-[12px]">
-                        <div class="h-[26px] px-[9px] bg-[#4caf7d17] border border-[#4caf7d47] rounded-[7px] flex items-center gap-[5px]">
+                        <div
+                            class="h-[26px] px-[9px] bg-[#4caf7d17] border border-[#4caf7d47] rounded-[7px] flex items-center gap-[5px]">
                             <div class="w-[5px] h-[5px] bg-[#4CAF7D] rounded-full"></div>
                             <span class="font-semibold text-[11px] text-[#4CAF7D] tracking-[0.3px]">WYKONANE</span>
                         </div>
-                        <svg width="6" height="10" viewBox="0 0 5 9" fill="none"><path d="M0.583 7.583L4.083 4.083L0.583 0.583" stroke="#5A6878" stroke-opacity="0.7" stroke-width="1.16" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <svg width="6" height="10" viewBox="0 0 5 9" fill="none">
+                            <path d="M0.583 7.583L4.083 4.083L0.583 0.583" stroke="#5A6878" stroke-opacity="0.7"
+                                stroke-width="1.16" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
                     </div>
                 </div>
 
@@ -296,19 +456,31 @@
         </div>
 
         <!-- sticky bottom bar -->
-        <div class="absolute bottom-0 w-full h-[85px] bg-[#111827] border-t border-[#e8e0d414] px-[16px] pt-[13px] flex gap-[8px]">
-            <div class="flex-1 h-[42px] bg-[#e05c5c14] border border-[#e05c5c42] rounded-[10px] flex items-center justify-center gap-[7px]">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#E05C5C" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+        <div
+            class="absolute bottom-0 w-full h-[85px] bg-[#111827] border-t border-[#e8e0d414] px-[16px] pt-[13px] flex gap-[8px]">
+            <div
+                class="flex-1 h-[42px] bg-[#e05c5c14] border border-[#e05c5c42] rounded-[10px] flex items-center justify-center gap-[7px]">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#E05C5C" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
                 <span class="font-extrabold text-[16px] text-[#E05C5C]">3</span>
                 <span class="font-normal text-[12px] text-[#e05c5ca6]">pilne</span>
             </div>
-            <div class="flex-1 h-[42px] bg-[#6faecc14] border border-[#6faecc3d] rounded-[10px] flex items-center justify-center gap-[7px]">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#6FAECC" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <div
+                class="flex-1 h-[42px] bg-[#6faecc14] border border-[#6faecc3d] rounded-[10px] flex items-center justify-center gap-[7px]">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#6FAECC" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
                 <span class="font-extrabold text-[16px] text-[#6FAECC]">2</span>
                 <span class="font-normal text-[12px] text-[#6faecca6]">w trakcie</span>
             </div>
-            <div class="flex-1 h-[42px] bg-[#4caf7d12] border border-[#4caf7d3d] rounded-[10px] flex items-center justify-center gap-[7px]">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#4CAF7D" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <div
+                class="flex-1 h-[42px] bg-[#4caf7d12] border border-[#4caf7d3d] rounded-[10px] flex items-center justify-center gap-[7px]">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#4CAF7D" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
                 <span class="font-extrabold text-[16px] text-[#4CAF7D]">3</span>
                 <span class="font-normal text-[12px] text-[#4caf7da6]">wykonane</span>
             </div>
@@ -316,4 +488,5 @@
 
     </div>
 </body>
+
 </html>
